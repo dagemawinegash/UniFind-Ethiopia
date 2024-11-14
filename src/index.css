@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body{
+  background: #F3F4F6;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.btn{
+  font-size: 16px;
+  padding: 14px 25px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
