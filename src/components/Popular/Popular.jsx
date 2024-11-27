@@ -9,6 +9,10 @@ import { Link } from "react-router-dom";
 export default function Popular() {
   return (
     <div name="popular">
+      <div className="title">
+        <h1>Popular Colleges</h1>
+        <h4>Explore here:</h4>
+      </div>
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
@@ -32,31 +36,127 @@ export default function Popular() {
           },
         }}
       >
-        <SwiperSlide key={universityData[0].id} className="swipe-slide">
-          <Link to={`/university/${universityData[0].id}`} className="link">
+        <SwiperSlide key={universityData[0].id} className="card">
+          <Link
+            to={`/university/${universityData[0].id}`}
+            className="card-image"
+          >
             <img src={universityData[0].image} alt={universityData[0].name} />
+            <span className="card-location">Stanford, CA</span>
           </Link>
+          <div className="card-body">
+            <h3>{universityData[0].name}</h3>
+            <p>Private 4 Year</p>
+          </div>
         </SwiperSlide>
-        <SwiperSlide key={universityData[1].id} className="swipe-slide">
-          <Link to={`/university/${universityData[1].id}`} className="link">
-            <img src={universityData[1].image} alt={universityData[1].name} />
+
+        <SwiperSlide key={universityData[0].id} className="card">
+          <Link
+            to={`/university/${universityData[0].id}`}
+            className="card-image"
+          >
+            <img src={universityData[0].image} alt={universityData[0].name} />
+            <span className="card-location">Stanford, CA</span>
           </Link>
+          <div className="card-body">
+            <h3>{universityData[0].name}</h3>
+            <p>Public 4 Year</p>
+          </div>
         </SwiperSlide>
-        <SwiperSlide key={universityData[2].id} className="swipe-slide">
-          <Link to={`/university/${universityData[2].id}`} className="link">
-            <img src={universityData[2].image} alt={universityData[2].name} />
+
+        <SwiperSlide key={universityData[0].id} className="card">
+          <Link
+            to={`/university/${universityData[0].id}`}
+            className="card-image"
+          >
+            <img src={universityData[0].image} alt={universityData[0].name} />
+            <span className="card-location">Stanford, CA</span>
           </Link>
+          <div className="card-body">
+            <h3>{universityData[0].name}</h3>
+            <p>Private 4 Year</p>
+          </div>
         </SwiperSlide>
-        <SwiperSlide key={universityData[3].id} className="swipe-slide">
-          <Link to={`/university/${universityData[3].id}`} className="link">
-            <img src={universityData[3].image} alt={universityData[3].name} />
+
+        <SwiperSlide key={universityData[0].id} className="card">
+          <Link
+            to={`/university/${universityData[0].id}`}
+            className="card-image"
+          >
+            <img src={universityData[0].image} alt={universityData[0].name} />
+            <span className="card-location">Stanford, CA</span>
           </Link>
+          <div className="card-body">
+            <h3>{universityData[0].name}</h3>
+            <p>Private 4 Year</p>
+          </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+
+        <SwiperSlide key={universityData[0].id} className="card">
+          <Link
+            to={`/university/${universityData[0].id}`}
+            className="card-image"
+          >
+            <img src={universityData[0].image} alt={universityData[0].name} />
+            <span className="card-location">Stanford, CA</span>
+          </Link>
+          <div className="card-body">
+            <h3>{universityData[0].name}</h3>
+            <p>Public 4 Year</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide key={universityData[0].id} className="card">
+          <Link
+            to={`/university/${universityData[0].id}`}
+            className="card-image"
+          >
+            <img src={universityData[0].image} alt={universityData[0].name} />
+            <span className="card-location">Stanford, CA</span>
+          </Link>
+          <div className="card-body">
+            <h3>{universityData[0].name}</h3>
+            <p>Public 4 Year</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide key={universityData[0].id} className="card">
+          <Link
+            to={`/university/${universityData[0].id}`}
+            className="card-image"
+          >
+            <img src={universityData[0].image} alt={universityData[0].name} />
+            <span className="card-location">Stanford, CA</span>
+          </Link>
+          <div className="card-body">
+            <h3>{universityData[0].name}</h3>
+            <p>Public 4 Year</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide key={universityData[0].id} className="card">
+          <Link
+            to={`/university/${universityData[0].id}`}
+            className="card-image"
+          >
+            <img src={universityData[0].image} alt={universityData[0].name} />
+            <span className="card-location">Stanford, CA</span>
+          </Link>
+          <div className="card-body">
+            <h3>{universityData[0].name}</h3>
+            <p>Public 4 Year</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide key={universityData[0].id} className="card">
+          <Link
+            to={`/university/${universityData[0].id}`}
+            className="card-image"
+          >
+            <img src={universityData[0].image} alt={universityData[0].name} />
+            <span className="card-location">Stanford, CA</span>
+          </Link>
+          <div className="card-body">
+            <h3>{universityData[0].name}</h3>
+            <p>Public 4 Year</p>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );

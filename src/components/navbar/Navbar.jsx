@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className='navbar'>
         <img src={logo} alt="" className='logo' />
         <ul>
-          <li><Link to='hero' smooth={true} offset={0} duration={500}>Hero</Link></li>
+          <li><Link to='hero' smooth={true} offset={0} duration={500}>Home</Link></li>
           <li><Link to='popular' smooth={true} offset={0} duration={500}>Popular</Link></li>
           <li>News</li>
           <li>City</li>
