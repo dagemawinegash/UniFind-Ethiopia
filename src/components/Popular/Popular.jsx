@@ -1,4 +1,3 @@
-import universityData from "../../../universities.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -6,6 +5,7 @@ import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 import "./Popular.css";
 import { Link } from "react-router-dom";
+import { universityData } from "../../../universities";
 export default function Popular() {
   return (
     <div name="popular">
