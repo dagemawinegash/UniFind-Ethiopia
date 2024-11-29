@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./UniversitySearch.css";
-import universityData from "../../../universities.json";
+import { universityData } from "../../../universities";
 import { Link } from "react-router-dom";
 
 const UniversitySearch = () => {

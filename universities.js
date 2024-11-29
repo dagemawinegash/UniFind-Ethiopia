@@ -1,24 +1,26 @@
-[
+import image1 from "./src/assets/hero.png"
+
+export const universityData = [
   {
     "id": 1,
     "name": "Addis Ababa University",
-    "image": "./src/assets/hero.png", 
+    "image": image1, 
     "rating": 4.5
   },
   {
     "id": 2,
     "name": "Adama Science and Technology University",
-    "image": "./src/assets/hero2.jpg", 
+    "image": image1, 
     "rating": 4.5
   },
   {
     "id": 3,
     "name": "Arba Minch University",
-    "image": "./src/assets/hero3.jpg" 
+    "image": image1 
   },
   {
     "id": 4,
     "name": "Bahir Dar University",
-    "image": "./src/assets/hero2.jpg"
+    "image": image1
   }
 ]

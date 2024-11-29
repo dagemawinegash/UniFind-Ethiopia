@@ -1,4 +1,3 @@
-// App.jsx
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import UniversityDetails from './components/UniversityDetails/UniversityDetails';
