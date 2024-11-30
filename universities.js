@@ -5,7 +5,8 @@ export const universityData = [
     "id": 1,
     "name": "Addis Ababa University",
     "image": image1, 
-    "rating": 4.5
+    "rating": 4.5,
+    "location": "Addis Ababa, AA"
   },
   {
     "id": 2,
