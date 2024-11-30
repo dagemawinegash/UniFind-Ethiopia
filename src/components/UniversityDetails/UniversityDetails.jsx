@@ -28,13 +28,52 @@ const UniversityDetails = () => {
           <button className="button button2">Connect</button>
         </div>
       </div>
-      <nav className="details-nav">
-        <Link to="overview">Overview</Link>
-        <Link to="admissions">Admissions</Link>
-        <Link to="majors">Majors</Link>
-        <Link to="location">Location</Link>
-      </nav>
-      <Outlet />
+      <div className="details-layout">
+        {/* Sidebar */}
+        <nav className="sidebar">
+          <Link
+            to="overview"
+            className={location.pathname.includes("overview") ? "active" : ""}
+          >
+            Overview
+          </Link>
+          <Link
+            to="admissions"
+            className={location.pathname.includes("admissions") ? "active" : ""}
+          >
+            Admissions
+          </Link>
+          <Link
+            to="majors"
+            className={location.pathname.includes("majors") ? "active" : ""}
+          >
+            Majors
+          </Link>
+          <Link
+            to="location"
+            className={location.pathname.includes("location") ? "active" : ""}
+          >
+            Location
+          </Link>
+          <Link
+            to="diversity"
+            className={location.pathname.includes("diversity") ? "active" : ""}
+          >
+            Diversity
+          </Link>
+          <Link
+            to="reviews"
+            className={location.pathname.includes("reviews") ? "active" : ""}
+          >
+            Reviews
+          </Link>
+        </nav>
+
+        {/* Main Content */}
+        <div className="main-content">
+          <Outlet context={university} />
+        </div>
+      </div>
     </div>
   );
 };
