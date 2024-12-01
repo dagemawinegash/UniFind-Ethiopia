@@ -74,6 +74,11 @@
   font-weight: 500;
 }
 
+.buttons button:hover{
+  filter: brightness(80%);
+}
+
+
 .button.button1 {
   background-color: #212EA0;
   color: white;

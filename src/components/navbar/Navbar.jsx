@@ -19,7 +19,7 @@ const Navbar = () => {
     await scroller.scrollTo(selector, {
       duration: 500,
       smooth: true,
-      offset: -75,
+      offset: 0,
       spy: true,
     });
   };
