@@ -46,14 +46,23 @@ const Navbar = () => {
                 <ScrollLink
                   to="popular"
                   smooth={true}
-                  offset={0}
+                  offset={-100}
                   duration={500}
                 >
                   Popular
                 </ScrollLink>
               </li>
               <li className="home-page-list">News</li>
-              <li className="home-page-list">City</li>
+              <li className="home-page-list">
+                <ScrollLink
+                  to="city"
+                  smooth={true}
+                  offset={-105}
+                  duration={500}
+                >
+                  City
+                </ScrollLink>
+              </li>
               <li className="btn my-list-btn home-page-list">My List</li>
             </>
           ) : (
