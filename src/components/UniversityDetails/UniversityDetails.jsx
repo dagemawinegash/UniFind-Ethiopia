@@ -1,4 +1,5 @@
 import { Outlet, Link, useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { universityData } from "../../../universities";
 import "./universityDetails.css";
 import { FaLocationDot } from "react-icons/fa6";
@@ -7,6 +8,10 @@ import { FaHeart } from "react-icons/fa";
 const UniversityDetails = () => {
   const { id } = useParams();
   const university = universityData.find((uni) => uni.id === parseInt(id));
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="university-details container">

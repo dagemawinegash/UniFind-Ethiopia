@@ -1,0 +1,51 @@
+.overview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.overview-container > h3{
+  font-size: 32px;
+  color: #000F38;
+  margin-bottom: 10px;
+
+}
+.overview-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.overview-section div {
+  flex: 1;
+}
+
+.overview-section-details{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 20px 10px 20px;
+}
+
+.overview-section strong {
+  font-size: 18px;
+  color: #333;
+}
+
+.overview-section p {
+  font-size: 16px;
+  color: #666;
+}
+
+.overview-section a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.overview-section a:hover {
+  text-decoration: underline;
+}
+
