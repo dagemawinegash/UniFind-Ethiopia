@@ -9,7 +9,7 @@ import { universityData } from "../../../universities";
 
 const City = () => {
   return (
-    <>
+    <div name="city">
       <div className="cities-title">
         <h1>Popular Cities for Universities</h1>
         <p>
@@ -66,7 +66,7 @@ const City = () => {
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 
