@@ -3,17 +3,17 @@
   margin: 20px;
 }
 
-.card {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.card-body {
+.popular-card-body {
   text-align: center;
   width: 100%;
   color: #000F38;
 }
 
-.card-location {
+.popular-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.popular-card-location {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -26,25 +26,34 @@
   z-index: 2; 
 }
 
-.card-image img {
+.popular-card-image img {
   width: 100%;
   height: 82%;
   object-fit: cover;
   margin-bottom: 5px;
 }
 
-.title{
+.title {
   text-align: center;
-  color: #212EA0;
-  font-size: 15px;
+  font-size: 16px; 
   font-weight: 600;
-  text-transform: uppercase;
-  margin: 30px 10px;
+  margin: 40px 15px;
 }
 
-.title h1{
-  font-size: 32px;
+.title h1 {
+  font-size: 36px; 
   color: #000F38;
-  margin-top: 5px;
-  text-transform: none;
+  margin-top: 10px;
+  font-weight: bold; 
+}
+
+.title p {
+  font-size: 18px;
+  color: #333; 
+  line-height: 1.6;
+  margin-top: 20px;
+  max-width: 800px; 
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; 
 }

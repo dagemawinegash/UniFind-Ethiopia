@@ -1,5 +1,5 @@
 .track-college-list-container {
-  height: 70vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,12 +17,12 @@
 
 .track-college-list-container h1 {
   font-size:3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .track-college-list-container p {
   font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
   max-width: 800px;
 }
 

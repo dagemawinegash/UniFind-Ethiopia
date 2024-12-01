@@ -10,9 +10,13 @@ export default function Popular() {
   return (
     <div name="popular">
       <div className="title">
-        <h1>Popular Colleges</h1>
-        <h4>Explore here:</h4>
+        <h1>Popular Universities in Ethiopia</h1>
+        <p>
+          Discover Ethiopia's leading universities, where academic excellence
+          meets vibrant campus life and diverse opportunities for growth!
+        </p>
       </div>
+
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
@@ -36,125 +40,125 @@ export default function Popular() {
           },
         }}
       >
-        <SwiperSlide key={universityData[0].id} className="card">
+        <SwiperSlide key={universityData[0].id} className="popular-card">
           <Link
             to={`/university/${universityData[0].id}`}
-            className="card-image"
+            className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="card-location">Stanford, CA</span>
+            <span className="popular-card-location">Stanford, CA</span>
           </Link>
-          <div className="card-body">
+          <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
             <p>Private 4 Year</p>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide key={universityData[0].id} className="card">
+        <SwiperSlide key={universityData[0].id} className="popular-card">
           <Link
             to={`/university/${universityData[0].id}`}
-            className="card-image"
+            className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="card-location">Stanford, CA</span>
+            <span className="popular-card-location">Stanford, CA</span>
           </Link>
-          <div className="card-body">
-            <h3>{universityData[0].name}</h3>
-            <p>Public 4 Year</p>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide key={universityData[0].id} className="card">
-          <Link
-            to={`/university/${universityData[0].id}`}
-            className="card-image"
-          >
-            <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="card-location">Stanford, CA</span>
-          </Link>
-          <div className="card-body">
+          <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
             <p>Private 4 Year</p>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide key={universityData[0].id} className="card">
+        <SwiperSlide key={universityData[0].id} className="popular-card">
           <Link
             to={`/university/${universityData[0].id}`}
-            className="card-image"
+            className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="card-location">Stanford, CA</span>
+            <span className="popular-card-location">Stanford, CA</span>
           </Link>
-          <div className="card-body">
+          <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
             <p>Private 4 Year</p>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide key={universityData[0].id} className="card">
+        <SwiperSlide key={universityData[0].id} className="popular-card">
           <Link
             to={`/university/${universityData[0].id}`}
-            className="card-image"
+            className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="card-location">Stanford, CA</span>
+            <span className="popular-card-location">Stanford, CA</span>
           </Link>
-          <div className="card-body">
+          <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
-            <p>Public 4 Year</p>
+            <p>Private 4 Year</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide key={universityData[0].id} className="card">
+
+        <SwiperSlide key={universityData[0].id} className="popular-card">
           <Link
             to={`/university/${universityData[0].id}`}
-            className="card-image"
+            className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="card-location">Stanford, CA</span>
+            <span className="popular-card-location">Stanford, CA</span>
           </Link>
-          <div className="card-body">
+          <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
-            <p>Public 4 Year</p>
+            <p>Private 4 Year</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide key={universityData[0].id} className="card">
+        <SwiperSlide key={universityData[0].id} className="popular-card">
           <Link
             to={`/university/${universityData[0].id}`}
-            className="card-image"
+            className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="card-location">Stanford, CA</span>
+            <span className="popular-card-location">Stanford, CA</span>
           </Link>
-          <div className="card-body">
+          <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
-            <p>Public 4 Year</p>
+            <p>Private 4 Year</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide key={universityData[0].id} className="card">
+        <SwiperSlide key={universityData[0].id} className="popular-card">
           <Link
             to={`/university/${universityData[0].id}`}
-            className="card-image"
+            className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="card-location">Stanford, CA</span>
+            <span className="popular-card-location">Stanford, CA</span>
           </Link>
-          <div className="card-body">
+          <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
-            <p>Public 4 Year</p>
+            <p>Private 4 Year</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide key={universityData[0].id} className="card">
+        <SwiperSlide key={universityData[0].id} className="popular-card">
           <Link
             to={`/university/${universityData[0].id}`}
-            className="card-image"
+            className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="card-location">Stanford, CA</span>
+            <span className="popular-card-location">Stanford, CA</span>
           </Link>
-          <div className="card-body">
+          <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
-            <p>Public 4 Year</p>
+            <p>Private 4 Year</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide key={universityData[0].id} className="popular-card">
+          <Link
+            to={`/university/${universityData[0].id}`}
+            className="popular-card-image"
+          >
+            <img src={universityData[0].image} alt={universityData[0].name} />
+            <span className="popular-card-location">Stanford, CA</span>
+          </Link>
+          <div className="popular-card-body">
+            <h3>{universityData[0].name}</h3>
+            <p>Private 4 Year</p>
           </div>
         </SwiperSlide>
       </Swiper>
