@@ -9,18 +9,18 @@ const Overview = () => {
         <div>
           <div className="overview-section-details">
             <strong>Enrollment</strong>
-            <p>30,631</p>
+            <p>40,200</p>
           </div>
           <hr />
           <div className="overview-section-details">
             <strong>Location</strong>
             <p>
               <a
-                href="https://www.harvard.edu"
+                href="https://www.aau.edu.et/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Cambridge, Massachusetts
+                4-KILO, Addis Ababa
               </a>
             </p>
           </div>
@@ -29,11 +29,11 @@ const Overview = () => {
             <strong>Online</strong>
             <p>
               <a
-                href="https://www.harvard.edu"
+                href="https://www.aau.edu.et/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                harvard.edu
+                aau.edu
               </a>
             </p>
           </div>

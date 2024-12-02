@@ -39,25 +39,25 @@ const City = () => {
         <SwiperSlide key={universityData[0].id} className="city-card">
           <div className="city-card-image">
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <h2 className="city-name">California</h2>
+            <h2 className="city-name">Adama</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide key={universityData[0].id} className="city-card">
           <div className="city-card-image">
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <h2 className="city-name">California</h2>
+            <h2 className="city-name">Adama</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide key={universityData[0].id} className="city-card">
           <div className="city-card-image">
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <h2 className="city-name">California</h2>
+            <h2 className="city-name">Adama</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide key={universityData[0].id} className="city-card">
           <div className="city-card-image">
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <h2 className="city-name">California</h2>
+            <h2 className="city-name">Adama</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>Slide 5</SwiperSlide>

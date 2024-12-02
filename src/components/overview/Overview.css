@@ -8,7 +8,6 @@
   font-size: 32px;
   color: #000F38;
   margin-bottom: 10px;
-
 }
 .overview-section {
   display: flex;
@@ -48,4 +47,20 @@
 .overview-section a:hover {
   text-decoration: underline;
 }
+
+.university-overview-text {
+  margin: 30px 10px 5px 10px; 
+  font-size: 16px; 
+  line-height: 1.8; 
+  text-align: justify; 
+  color: #444; 
+}
+
+.university-overview-text strong {
+  font-size: 20px; 
+  color: #007bff; 
+}
+
+
+
 
