@@ -46,7 +46,7 @@ export default function Popular() {
             className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">Stanford, CA</span>
+            <span className="popular-card-location">4-KILO, AA</span>
           </Link>
           <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
@@ -60,7 +60,7 @@ export default function Popular() {
             className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">Stanford, CA</span>
+            <span className="popular-card-location">4-KILO, AA</span>
           </Link>
           <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
@@ -74,7 +74,7 @@ export default function Popular() {
             className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">Stanford, CA</span>
+            <span className="popular-card-location">4-KILO, AA</span>
           </Link>
           <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
@@ -88,7 +88,7 @@ export default function Popular() {
             className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">Stanford, CA</span>
+            <span className="popular-card-location">4-KILO, AA</span>
           </Link>
           <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
@@ -102,7 +102,7 @@ export default function Popular() {
             className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">Stanford, CA</span>
+            <span className="popular-card-location">4-KILO, AA</span>
           </Link>
           <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
@@ -115,7 +115,7 @@ export default function Popular() {
             className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">Stanford, CA</span>
+            <span className="popular-card-location">4-KILO, AA</span>
           </Link>
           <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
@@ -128,7 +128,7 @@ export default function Popular() {
             className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">Stanford, CA</span>
+            <span className="popular-card-location">4-KILO, AA</span>
           </Link>
           <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
@@ -141,7 +141,7 @@ export default function Popular() {
             className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">Stanford, CA</span>
+            <span className="popular-card-location">4-KILO, AA</span>
           </Link>
           <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
@@ -154,7 +154,7 @@ export default function Popular() {
             className="popular-card-image"
           >
             <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">Stanford, CA</span>
+            <span className="popular-card-location">4-KILO, AA</span>
           </Link>
           <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>

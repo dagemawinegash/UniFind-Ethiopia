@@ -1,0 +1,60 @@
+.majors-container {
+  padding: 10px 20px 20px 20px;
+}
+
+.majors-container > h3{
+  font-size: 32px;
+  color: #000F38;
+  margin-bottom: 20px;
+  text-align: center;
+
+  
+}
+.major-category {
+  margin-bottom: 20px;
+}
+
+.major-category h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.graduates-header {
+  font-size: 17px;
+  color: gray;
+  margin-left: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.major-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.major-name {
+  font-size: 17px;
+}
+
+.graduate-count {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+
+.university-majors-text {
+  margin: 10px 0 25px 0; 
+  font-size: 16px; 
+  line-height: 1.8; 
+  text-align: justify; 
+  color: #444; 
+}
