@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import {
@@ -10,13 +11,32 @@ import { Link as ScrollLink } from "react-scroll";
 import { scroller } from "react-scroll";
 import { useSelector } from "react-redux";
 
-
 const Navbar = () => {
   const path = useLocation().pathname;
   const location = path.split("/")[1];
   const navigate = useNavigate();
   const myLists = useSelector((state) => state.list);
   const count = myLists.length;
+
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (location === "") {
+        setSticky(window.scrollY > 50);
+      }
+    };
+
+    if (location === "") {
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      setSticky(true);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [location]);
 
   const goToPageAndScroll = async (selector) => {
     await navigate("/");
@@ -30,7 +50,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${sticky ? "dark-nav" : ""}`}>
         <img src={logo} alt="" className="logo" />
         <ul>
           {location === "" ? (
