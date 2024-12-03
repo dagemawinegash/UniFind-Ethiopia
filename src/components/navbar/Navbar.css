@@ -9,8 +9,6 @@
   padding: 5px 5%; 
   justify-content: space-between;
   z-index: 10;
-  background-color: #212EA0;
-
 }
 
 
@@ -41,5 +39,10 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
+}
+
+.dark-nav{
+  background-color: #212EA0;
+  transition: 1s;
 }
 
