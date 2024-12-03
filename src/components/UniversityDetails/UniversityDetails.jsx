@@ -4,14 +4,28 @@ import { universityData } from "../../../universities";
 import "./universityDetails.css";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { add } from "../../store/listSlice";
 
 const UniversityDetails = () => {
   const { id } = useParams();
+  const dispatch = useDispatch();
+  const list = useSelector((state) => state.list);
+  console.log(list)
+
   const university = universityData.find((uni) => uni.id === parseInt(id));
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  if (!university) {
+    return <div>University not found!</div>;
+  }
+
+  const addToList = () => {
+    dispatch(add(university));
+  };
 
   return (
     <div className="university-details container">
@@ -25,8 +39,7 @@ const UniversityDetails = () => {
           </p>
         </div>
         <div className="buttons">
-          <button className="button button1">
-            {" "}
+          <button className="button button1" onClick={addToList}>
             <FaHeart style={{ fontSize: "18px", paddingTop: "5px" }} /> Add to
             Your List
           </button>
@@ -34,7 +47,6 @@ const UniversityDetails = () => {
         </div>
       </div>
       <div className="details-layout">
-        {/* Sidebar */}
         <nav className="sidebar">
           <Link
             to="overview"
@@ -74,7 +86,6 @@ const UniversityDetails = () => {
           </Link>
         </nav>
 
-        {/* Main Content */}
         <div className="main-content">
           <Outlet context={university} />
         </div>
