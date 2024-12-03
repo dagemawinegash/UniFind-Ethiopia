@@ -29,7 +29,7 @@
 } 
 
 
-.my-list-btn, .other-page-list .goToPageAndScroll-btn {
+.my-list-btn.home-page-list{
   background-color: #FFFFFF;
   color: #000F38;
 }

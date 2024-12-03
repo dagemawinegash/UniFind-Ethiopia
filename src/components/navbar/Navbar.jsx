@@ -8,11 +8,15 @@ import {
 } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { scroller } from "react-scroll";
+import { useSelector } from "react-redux";
+
 
 const Navbar = () => {
   const path = useLocation().pathname;
   const location = path.split("/")[1];
   const navigate = useNavigate();
+  const myLists = useSelector((state) => state.list);
+  const count = myLists.length;
 
   const goToPageAndScroll = async (selector) => {
     await navigate("/");
@@ -63,7 +67,9 @@ const Navbar = () => {
                   City
                 </ScrollLink>
               </li>
-              <li className="btn my-list-btn home-page-list">My List</li>
+              <li className="btn my-list-btn home-page-list">
+                <RouterLink to="/lists">My List {count}</RouterLink>
+              </li>
             </>
           ) : (
             <>
@@ -81,13 +87,8 @@ const Navbar = () => {
               <li className="other-page-list">
                 <button onClick={() => goToPageAndScroll("city")}>City</button>
               </li>
-              <li className="other-page-list">
-                <button
-                  onClick={() => goToPageAndScroll("my-list")}
-                  className="btn goToPageAndScroll-btn"
-                >
-                  My List
-                </button>
+              <li className="btn my-list-btn home-page-list">
+                <RouterLink to="/lists">My List {count}</RouterLink>
               </li>
             </>
           )}
