@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { remove } from "../../store/listSlice";
 import { FaLocationDot } from "react-icons/fa6";
-import { FaHeart } from "react-icons/fa";
 import "./list.css";
+import { FaHeartBroken } from "react-icons/fa";
 import emptyList from "../../assets/empty-list.jpg";
 import { Link } from "react-router-dom";
 
@@ -34,7 +34,7 @@ const List = () => {
 
   const universities = myLists.map((university) => (
     <div key={university.id} className="list-details-image">
-      <img src={university.image} alt={university.name} />
+      <img src={university.universityImage} alt={university.name} />
       <div className="list-details-content">
         <h1>{university.name}</h1>
         <p className="list-location">
@@ -47,8 +47,8 @@ const List = () => {
           className="list-button list-button1"
           onClick={() => removeFromList(university)}
         >
-          <FaHeart style={{ fontSize: "18px", paddingTop: "5px" }} /> Remove
-          from List
+          <FaHeartBroken style={{ fontSize: "17px", marginRight: "3px", paddingTop:"3px"}} />
+          Remove from List
         </button>
 
         <button className="list-button list-button2">

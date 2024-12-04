@@ -7,11 +7,12 @@ import { FaHeart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { add } from "../../store/listSlice";
 
+
 const UniversityDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const list = useSelector((state) => state.list);
-  console.log(list)
+  console.log(list);
 
   const university = universityData.find((uni) => uni.id === parseInt(id));
 
@@ -30,7 +31,7 @@ const UniversityDetails = () => {
   return (
     <div className="university-details container">
       <div className="university-details-image">
-        <img src={university.image} alt={university.name} />
+        <img src={university.universityImage} alt={university.name} />
         <div className="university-details-content">
           <h1>{university.name}</h1>
           <p className="location">
@@ -43,7 +44,14 @@ const UniversityDetails = () => {
             <FaHeart style={{ fontSize: "18px", paddingTop: "5px" }} /> Add to
             Your List
           </button>
-          <button className="button button2">Connect</button>
+          <button
+            className="button button2"
+            onClick={() => {
+              window.open(university.officialWebsite, "_blank");
+            }}
+          >
+            Connect
+          </button>
         </div>
       </div>
       <div className="details-layout">
