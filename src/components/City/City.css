@@ -39,6 +39,7 @@
   font-size: 40px;
   z-index: 1; 
   transition: opacity 0.3s ease;
+  width: 100%;
 }
 
 .city-card-image:hover .city-name {

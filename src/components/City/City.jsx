@@ -38,8 +38,8 @@ const City = () => {
       >
         <SwiperSlide key={universityData[0].id} className="city-card">
           <div className="city-card-image">
-            <img src={universityData[0].image} alt={universityData[0].name} />
-            <h2 className="city-name">Adama</h2>
+            <img src={universityData[0].cityImage} alt={universityData[0].name} />
+            <h2 className="city-name">{universityData[0].cityName}</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide key={universityData[0].id} className="city-card">

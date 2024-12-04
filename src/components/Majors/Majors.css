@@ -2,20 +2,27 @@
   padding: 10px 20px 20px 20px;
 }
 
-.majors-container > h3{
+.majors-container > h3 {
   font-size: 32px;
   color: #000F38;
   margin-bottom: 20px;
   text-align: center;
-
-  
-}
-.major-category {
-  margin-bottom: 20px;
 }
 
-.major-category h3 {
-  font-size: 20px;
+.university-majors-text {
+  margin: 10px 0 25px 0; 
+  font-size: 16px; 
+  line-height: 1.8; 
+  text-align: justify; 
+  color: #444; 
+}
+
+.college-category {
+  padding-bottom: 20px;
+}
+
+.college-category h3 {
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
   display: flex;
@@ -23,21 +30,30 @@
   align-items: center;
 }
 
-.graduates-header {
-  font-size: 17px;
+.graduates-header{
+  font-size: 22px;
   color: gray;
   margin-left: 10px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.division-category {
+  margin-bottom: 15px;
 }
+
+.division-name {
+  font-size: 20px;
+  color: #555;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
 
 .major-item {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 5px 0;
+  margin-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -48,13 +64,4 @@ ul {
 .graduate-count {
   font-size: 17px;
   font-weight: bold;
-}
-
-
-.university-majors-text {
-  margin: 10px 0 25px 0; 
-  font-size: 16px; 
-  line-height: 1.8; 
-  text-align: justify; 
-  color: #444; 
 }

@@ -45,12 +45,15 @@ export default function Popular() {
             to={`/university/${universityData[0].id}`}
             className="popular-card-image"
           >
-            <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">4-KILO, AA</span>
+            <img
+              src={universityData[0].universityImage}
+              alt={universityData[0].name}
+            />
+            <span className="popular-card-location">{universityData[0].location}</span>
           </Link>
           <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
-            <p>Private 4 Year</p>
+            <p>{universityData[0].type} {universityData[0].duration}</p>
           </div>
         </SwiperSlide>
 
