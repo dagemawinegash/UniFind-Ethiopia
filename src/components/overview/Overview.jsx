@@ -9,8 +9,16 @@ const Overview = () => {
       <div className="overview-section">
         <div>
           <div className="overview-section-details">
-            <strong>Enrollment</strong>
-            <p>{university.enrollmentNumber}</p>
+            <strong>
+              {university.UGRADenrollmentNumber != undefined
+                ? "UGrad.Enrollment"
+                : "Enrollment"}
+            </strong>
+            <p>
+              {university.UGRADenrollmentNumber != undefined
+                ? university.UGRADenrollmentNumber
+                : university.generalEnrollmentNumber}
+            </p>
           </div>
           <hr />
           <div className="overview-section-details">
@@ -67,7 +75,10 @@ const Overview = () => {
         </div>
       </div>
       <p className="university-overview-text">
-        <strong>{university.name} ({university.nameAbbrivation})</strong> {university.overviewDescription}
+        <strong>
+          {university.name} ({university.nameAbbrivation})
+        </strong>{" "}
+        {university.overviewDescription}
       </p>
     </div>
   );

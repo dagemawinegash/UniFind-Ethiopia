@@ -38,8 +38,8 @@ const UniversitySearch = () => {
 
       <ul className="uni-search-results">
         {results.map((uni) => (
-          <Link to={`/university/${uni.id}`}>
-            <li key={uni.id}>{uni.name}</li>
+          <Link to={`/university/${uni.id}`} key={uni.id}>
+            <li>{uni.name}</li>
           </Link>
         ))}
       </ul>
