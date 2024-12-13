@@ -34,7 +34,14 @@ const List = () => {
 
   const universities = myLists.map((university) => (
     <div key={university.id} className="list-details-image">
-      <img src={university.universityImage} alt={university.name} />
+      <img
+        src={
+          university.universityImage2 != null
+            ? university.universityImage2
+            : university.universityImage1
+        }
+        alt={university.name}
+      />
       <div className="list-details-content">
         <h1>{university.name}</h1>
         <p className="list-location">
@@ -47,7 +54,9 @@ const List = () => {
           className="list-button list-button1"
           onClick={() => removeFromList(university)}
         >
-          <FaHeartBroken style={{ fontSize: "17px", marginRight: "3px", paddingTop:"3px"}} />
+          <FaHeartBroken
+            style={{ fontSize: "17px", marginRight: "3px", paddingTop: "3px" }}
+          />
           Remove from List
         </button>
 

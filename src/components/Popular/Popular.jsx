@@ -46,124 +46,76 @@ export default function Popular() {
             className="popular-card-image"
           >
             <img
-              src={universityData[0].universityImage}
+              src={
+                universityData[0].universityImage1 != null
+                  ? universityData[0].universityImage1
+                  : universityData[0].universityImage2
+              }
               alt={universityData[0].name}
             />
-            <span className="popular-card-location">{universityData[0].location}</span>
+            <span className="popular-card-location">
+              {universityData[0].location}
+            </span>
           </Link>
           <div className="popular-card-body">
             <h3>{universityData[0].name}</h3>
-            <p>{universityData[0].type} {universityData[0].duration}</p>
+            <p>
+              {universityData[0].type} {universityData[0].duration}
+            </p>
           </div>
         </SwiperSlide>
 
-        <SwiperSlide key={universityData[0].id} className="popular-card">
+        <SwiperSlide key={universityData[1].id} className="popular-card">
           <Link
-            to={`/university/${universityData[0].id}`}
+            to={`/university/${universityData[1].id}`}
             className="popular-card-image"
           >
-            <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">4-KILO, AA</span>
+            <img
+              src={
+                universityData[1].universityImage1 != null
+                  ? universityData[1].universityImage1
+                  : universityData[1].universityImage2
+              }
+              alt={universityData[1].name}
+            />
+            <span className="popular-card-location">
+              {universityData[1].location}
+            </span>
           </Link>
           <div className="popular-card-body">
-            <h3>{universityData[0].name}</h3>
-            <p>Private 4 Year</p>
+            <h3>{universityData[1].name}</h3>
+            <p>
+              {universityData[1].type} {universityData[1].duration}
+            </p>
           </div>
         </SwiperSlide>
-
-        <SwiperSlide key={universityData[0].id} className="popular-card">
+        <SwiperSlide key={universityData[2].id} className="popular-card">
           <Link
-            to={`/university/${universityData[0].id}`}
+            to={`/university/${universityData[2].id}`}
             className="popular-card-image"
           >
-            <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">4-KILO, AA</span>
+            <img
+              src={
+                universityData[2].universityImage1 != null
+                  ? universityData[2].universityImage1
+                  : universityData[2].universityImage2
+              }
+              alt={universityData[2].name}
+            />
+            <span className="popular-card-location">
+              {universityData[2].location}
+            </span>
           </Link>
           <div className="popular-card-body">
-            <h3>{universityData[0].name}</h3>
-            <p>Private 4 Year</p>
+            <h3>{universityData[2].name}</h3>
+            <p>
+              {universityData[2].type} {universityData[2].duration}
+            </p>
           </div>
         </SwiperSlide>
-
-        <SwiperSlide key={universityData[0].id} className="popular-card">
-          <Link
-            to={`/university/${universityData[0].id}`}
-            className="popular-card-image"
-          >
-            <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">4-KILO, AA</span>
-          </Link>
-          <div className="popular-card-body">
-            <h3>{universityData[0].name}</h3>
-            <p>Private 4 Year</p>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide key={universityData[0].id} className="popular-card">
-          <Link
-            to={`/university/${universityData[0].id}`}
-            className="popular-card-image"
-          >
-            <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">4-KILO, AA</span>
-          </Link>
-          <div className="popular-card-body">
-            <h3>{universityData[0].name}</h3>
-            <p>Private 4 Year</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide key={universityData[0].id} className="popular-card">
-          <Link
-            to={`/university/${universityData[0].id}`}
-            className="popular-card-image"
-          >
-            <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">4-KILO, AA</span>
-          </Link>
-          <div className="popular-card-body">
-            <h3>{universityData[0].name}</h3>
-            <p>Private 4 Year</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide key={universityData[0].id} className="popular-card">
-          <Link
-            to={`/university/${universityData[0].id}`}
-            className="popular-card-image"
-          >
-            <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">4-KILO, AA</span>
-          </Link>
-          <div className="popular-card-body">
-            <h3>{universityData[0].name}</h3>
-            <p>Private 4 Year</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide key={universityData[0].id} className="popular-card">
-          <Link
-            to={`/university/${universityData[0].id}`}
-            className="popular-card-image"
-          >
-            <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">4-KILO, AA</span>
-          </Link>
-          <div className="popular-card-body">
-            <h3>{universityData[0].name}</h3>
-            <p>Private 4 Year</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide key={universityData[0].id} className="popular-card">
-          <Link
-            to={`/university/${universityData[0].id}`}
-            className="popular-card-image"
-          >
-            <img src={universityData[0].image} alt={universityData[0].name} />
-            <span className="popular-card-location">4-KILO, AA</span>
-          </Link>
-          <div className="popular-card-body">
-            <h3>{universityData[0].name}</h3>
-            <p>Private 4 Year</p>
-          </div>
-        </SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
       </Swiper>
     </div>
   );

@@ -7,7 +7,6 @@ import { FaHeart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { add } from "../../store/listSlice";
 
-
 const UniversityDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -31,7 +30,14 @@ const UniversityDetails = () => {
   return (
     <div className="university-details container">
       <div className="university-details-image">
-        <img src={university.universityImage} alt={university.name} />
+        <img
+          src={
+            university.universityImage2 != null
+              ? university.universityImage2
+              : university.universityImage1
+          }
+          alt={university.name}
+        />
         <div className="university-details-content">
           <h1>{university.name}</h1>
           <p className="location">

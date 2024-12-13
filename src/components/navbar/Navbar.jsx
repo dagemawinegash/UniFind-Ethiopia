@@ -43,7 +43,7 @@ const Navbar = () => {
     await scroller.scrollTo(selector, {
       duration: 500,
       smooth: true,
-      offset: 0,
+      offset: -90,
       spy: true,
     });
   };
@@ -70,7 +70,7 @@ const Navbar = () => {
                 <ScrollLink
                   to="popular"
                   smooth={true}
-                  offset={-100}
+                  offset={-90}
                   duration={500}
                 >
                   Popular
@@ -81,7 +81,7 @@ const Navbar = () => {
                 <ScrollLink
                   to="city"
                   smooth={true}
-                  offset={-105}
+                  offset={-90}
                   duration={500}
                 >
                   City
