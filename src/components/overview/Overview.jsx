@@ -25,7 +25,7 @@ const Overview = () => {
             <strong>Location</strong>
             <p>
               <a
-                href={university.mapLocation}
+                href={university.cityLocation}
                 target="_blank"
                 rel="noopener noreferrer"
               >
