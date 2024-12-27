@@ -1,11 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./UniversitySearch.css";
-import { universityData } from "../../../universities";
 import { Link } from "react-router-dom";
+import api from "../../api";
 
 const UniversitySearch = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
+  const [universityData, setUniversityData] = useState([]);
+  useEffect(() => {
+    getUniversities();
+  }, []);
+
+  const getUniversities = () => {
+    api
+      .get(`/api/universities/`)
+      .then((res) => res.data)
+      .then((data) => {
+        setUniversityData(data);
+      })
+      .catch((err) => alert(err));
+  };
+
+  console.log(universityData);
 
   const handleSearch = (e) => {
     const input = e.target.value;

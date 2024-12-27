@@ -26,57 +26,26 @@ const Majors = () => {
                 </span>
               </h3>
 
-              {Array.isArray(college.divisions) ? (
-                college.divisions.map(
-                  (division, divisionIndex) =>
-                    division.name && (
-                      <div
-                        key={`${division.name}-${divisionIndex}`}
-                        className="division-category"
-                      >
-                        <h4 className="division-name">{division.name}</h4>
-                        <ul>
-                          {division.majors.map(
-                            (major, majorIndex) =>
-                              major.name && (
-                                <li className="major-item">
-                                  <span className="major-name">
-                                    {major.name}
-                                  </span>
-                                  <span className="credit-hours-count">
-                                    {creditPoints === "Credit-Hours"
-                                      ? major.creditHours
-                                      : major.ECTS}
-                                  </span>
-                                </li>
-                              )
-                          )}
-                        </ul>
-                      </div>
-                    )
-                )
-              ) : (
-                <div className="college-majors">
-                  <ul>
-                    {college.majors.map(
-                      (major, majorIndex) =>
-                        major.name && (
-                          <li
-                            key={`${major.name}-${majorIndex}`}
-                            className="major-item"
-                          >
-                            <span className="major-name">{major.name}</span>
-                            <span className="credit-hours-count">
-                              {creditPoints === "Credit-Hours"
-                                ? major.creditHours
-                                : major.ECTS}
-                            </span>
-                          </li>
-                        )
-                    )}
-                  </ul>
-                </div>
-              )}
+              <div className="college-majors">
+                <ul>
+                  {college.majors.map(
+                    (major, majorIndex) =>
+                      major.name && (
+                        <li
+                          key={`${major.name}-${majorIndex}`}
+                          className="major-item"
+                        >
+                          <span className="major-name">{major.name}</span>
+                          <span className="credit-hours-count">
+                            {creditPoints === "Credit-Hours"
+                              ? major.creditHours
+                              : major.ECTS}
+                          </span>
+                        </li>
+                      )
+                  )}
+                </ul>
+              </div>
             </div>
           )
       )}

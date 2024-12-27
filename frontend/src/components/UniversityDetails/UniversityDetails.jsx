@@ -1,19 +1,32 @@
 import { Outlet, Link, useParams } from "react-router-dom";
-import { useEffect } from "react";
-import { universityData } from "../../../universities";
+import { useEffect, useState } from "react";
 import "./universityDetails.css";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { add } from "../../store/listSlice";
+import api from "../../api";
 
 const UniversityDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const list = useSelector((state) => state.list);
-  console.log(list);
 
-  const university = universityData.find((uni) => uni.id === parseInt(id));
+  const [university, setUniversity] = useState({});
+  useEffect(() => {
+    getUniversity();
+  }, []);
+
+  const getUniversity = () => {
+    api
+      .get(`/api/universities/${id}/`)
+      .then((res) => res.data)
+      .then((data) => {
+        setUniversity(data);
+      })
+      .catch((err) => alert(err));
+  };
+
+  console.log(university);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,12 +45,13 @@ const UniversityDetails = () => {
       <div className="university-details-image">
         <img
           src={
-            university.universityImage2 != null
-              ? university.universityImage2
-              : university.universityImage1
+            university.universityImage2
+              ? `http://127.0.0.1:8000${university.universityImage2}`
+              : `http://127.0.0.1:8000${university.universityImage1}`
           }
           alt={university.name}
         />
+
         <div className="university-details-content">
           <h1>{university.name}</h1>
           <p className="location">

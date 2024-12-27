@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { remove } from "../../store/listSlice";
 import { FaLocationDot } from "react-icons/fa6";
 import "./list.css";
@@ -36,9 +36,9 @@ const List = () => {
     <div key={university.id} className="list-details-image">
       <img
         src={
-          university.universityImage2 != null
-            ? university.universityImage2
-            : university.universityImage1
+          university.universityImage2
+            ? `http://127.0.0.1:8000${university.universityImage2}`
+            : `http://127.0.0.1:8000${university.universityImage1}`
         }
         alt={university.name}
       />
