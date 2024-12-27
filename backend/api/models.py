@@ -49,8 +49,8 @@ class Major(models.Model):
         College, related_name="majors", on_delete=models.CASCADE
     )
     name = models.CharField(max_length=200)
-    creditHours = models.IntegerField(blank=True, null=True)
-    ECTS = models.IntegerField(blank=True, null=True)
+    creditHours = models.CharField(max_length=50, blank=True, null=True)
+    ECTS = models.CharField(max_length=50, blank=True, null=True)
 
     def __str__(self):
         return self.name

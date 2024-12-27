@@ -9,16 +9,20 @@ const PostUniversityComponent = () => {
           "Content-Type": "application/json",
         },
       });
+      alert("University data posted successfully!");
     } catch (error) {
-      console.error(
-        "Error posting data:",
-        error.response ? error.response.data : error.message
+      alert(
+        "Error posting data: " +
+          (error.response ? error.response.data : error.message)
       );
     }
   };
+
   return (
     <div>
-      <button onClick={() => postUniversities(data)}>Post University Data</button>
+      <button onClick={() => postUniversities(data)}>
+        Post University Data
+      </button>
     </div>
   );
 };
