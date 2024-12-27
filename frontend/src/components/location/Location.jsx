@@ -29,7 +29,7 @@ const Location = () => {
           rel="noopener noreferrer"
         >
           <img
-            src={university.mapImage}
+            src={`http://127.0.0.1:8000${university.mapImage}`}
             alt={`Map of ${university.name}`}
             className="map-image"
           />

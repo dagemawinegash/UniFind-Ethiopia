@@ -5,7 +5,7 @@ from .models import University, College, Major
 class MajorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Major
-        fields = ["id", "name", "creditHours"]
+        fields = ["id", "name", "creditHours", "ECTS"]
 
 
 class CollegeSerializer(serializers.ModelSerializer):
@@ -15,9 +15,27 @@ class CollegeSerializer(serializers.ModelSerializer):
         model = College
         fields = ["id", "name", "majors"]
 
+    def create(self, validated_data):
+        majors_data = validated_data.pop("majors", [])
+
+        college = College.objects.create(**validated_data)
+
+        for major_data in majors_data:
+            Major.objects.create(college=college, **major_data)
+
+        return college
+
 
 class UniversitySerializer(serializers.ModelSerializer):
     colleges = CollegeSerializer(many=True)
+    universityImage1 = serializers.ImageField(
+        max_length=None, use_url=True, required=False
+    )
+    universityImage2 = serializers.ImageField(
+        max_length=None, use_url=True, required=False
+    )
+    mapImage = serializers.ImageField(max_length=None, use_url=True, required=False)
+    cityImage = serializers.ImageField(max_length=None, use_url=True, required=False)
 
     class Meta:
         model = University
@@ -26,6 +44,7 @@ class UniversitySerializer(serializers.ModelSerializer):
             "name",
             "nameAbbrivation",
             "universityImage1",
+            "universityImage2",
             "location",
             "cityLocation",
             "mapLocation",
@@ -41,12 +60,27 @@ class UniversitySerializer(serializers.ModelSerializer):
             "officialWebsite",
             "websitePrefix",
             "UGRADenrollmentNumber",
+            "generalEnrollmentNumber",
             "size",
             "status",
             "onCampusHousing",
             "levelOfStudy",
             "overviewDescription",
             "majorsDescription",
-            "credit_points",
+            "creditPoints",
             "colleges",
         ]
+
+    def create(self, validated_data):
+        colleges_data = validated_data.pop("colleges", [])
+
+        university = University.objects.create(**validated_data)
+
+        for college_data in colleges_data:
+            majors_data = college_data.pop("majors", [])
+            college = College.objects.create(university=university, **college_data)
+
+            for major_data in majors_data:
+                Major.objects.create(college=college, **major_data)
+
+        return university
