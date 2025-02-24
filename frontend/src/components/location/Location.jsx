@@ -23,18 +23,11 @@ const Location = () => {
         </p>
       </div>
       <div className="map-container">
-        <a
-          href={university.mapLocation}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src={`http://127.0.0.1:8000${university.mapImage}`}
-            alt={`Map of ${university.name}`}
-            className="map-image"
-          />
-          <div className="hover-text">View Larger Map</div>
-        </a>
+        <iframe
+          src={university.mapLocation}
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
   );

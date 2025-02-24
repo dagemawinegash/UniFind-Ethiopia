@@ -23,6 +23,7 @@ const Majors = () => {
                 {college.name}{" "}
                 <span className="graduates-header">
                   {creditPoints === "Credit-Hours" ? "Min. Cr.hrs" : "ECTS"}
+                  /Yrs
                 </span>
               </h3>
 
