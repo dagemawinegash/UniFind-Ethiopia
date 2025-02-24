@@ -22,14 +22,14 @@ const Overview = () => {
           </div>
           <hr />
           <div className="overview-section-details">
-            <strong>Location</strong>
+            <strong>City Location</strong>
             <p>
               <a
                 href={university.cityLocation}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {university.location}
+                {university.cityName}
               </a>
             </p>
           </div>
@@ -77,7 +77,7 @@ const Overview = () => {
       <p className="university-overview-text">
         <strong>
           {university.name} ({university.nameAbbrivation})
-        </strong>{" "}
+        </strong>
         {university.overviewDescription}
       </p>
     </div>

@@ -27,39 +27,11 @@
   color: #333;
 }
 
-.map-container {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.map-image {
+.map-container iframe{
+  border: none;
+  width: 600px;
   height: 400px;
-  width: 100%;
-  max-width: 650px;
-  border-radius: 5px;
-  transition: transform 0.3s ease;
-  object-fit: cover; 
+  border-radius: 10px;
 }
 
-.map-container:hover .map-image {
-  transform: scale(1.05);
-}
 
-.hover-text {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-size: 1rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.map-container:hover .hover-text {
-  opacity: 1;
-}
