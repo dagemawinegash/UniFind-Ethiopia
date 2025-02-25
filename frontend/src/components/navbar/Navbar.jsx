@@ -28,6 +28,7 @@ const Navbar = () => {
     };
 
     if (location === "") {
+      setSticky(false);
       window.addEventListener("scroll", handleScroll);
     } else {
       setSticky(true);
@@ -62,7 +63,10 @@ const Navbar = () => {
             <img src={logo} alt="" className="logo" />
           </ScrollLink>
         ) : (
-          <button className="other-pages-logo" onClick={() => goToPageAndScroll("home")}>
+          <button
+            className="other-pages-logo"
+            onClick={() => goToPageAndScroll("home")}
+          >
             <img src={logo} alt="" className="logo" />
           </button>
         )}

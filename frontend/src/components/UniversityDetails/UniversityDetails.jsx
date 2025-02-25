@@ -6,12 +6,15 @@ import { FaHeart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { add } from "../../store/listSlice";
 import api from "../../api";
+import Swal from "sweetalert2";
 
 const UniversityDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+  const favoriteList = useSelector((state) => state.list);
 
   const [university, setUniversity] = useState({});
+
   useEffect(() => {
     getUniversity();
   }, []);
@@ -26,8 +29,6 @@ const UniversityDetails = () => {
       .catch((err) => alert(err));
   };
 
-  console.log(university);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -37,7 +38,24 @@ const UniversityDetails = () => {
   }
 
   const addToList = () => {
-    dispatch(add(university));
+    const exists = favoriteList.some((uni) => uni.id === university.id);
+
+    if (exists) {
+      Swal.fire({
+        icon: "warning",
+        title: "Already Added!",
+        text: `${university.name} is already in your list.`,
+        confirmButtonColor: "#3085d6",
+      });
+    } else {
+      dispatch(add(university));
+      Swal.fire({
+        icon: "success",
+        title: "Added!",
+        text: `${university.name} has been added to your list successfully!`,
+        confirmButtonColor: "#3085d6",
+      });
+    }
   };
 
   return (
@@ -51,7 +69,6 @@ const UniversityDetails = () => {
           }
           alt={university.name}
         />
-
         <div className="university-details-content">
           <h1>{university.name}</h1>
           <p className="location">

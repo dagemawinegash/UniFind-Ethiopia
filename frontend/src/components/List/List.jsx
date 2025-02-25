@@ -7,6 +7,7 @@ import "./list.css";
 import { FaHeartBroken } from "react-icons/fa";
 import emptyList from "../../assets/empty-list.jpg";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const List = () => {
   useEffect(() => {
@@ -18,6 +19,11 @@ const List = () => {
 
   const removeFromList = (university) => {
     dispatch(remove({ id: university.id }));
+    Swal.fire({
+      icon: "success",
+      title: "University Removed",
+      text: `${university.name} has been removed from your list successfully!`,
+    });
   };
 
   if (myLists.length === 0) {
