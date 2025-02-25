@@ -83,12 +83,6 @@ const UniversityDetails = () => {
             Overview
           </Link>
           <Link
-            to="admissions"
-            className={location.pathname.includes("admissions") ? "active" : ""}
-          >
-            Admissions
-          </Link>
-          <Link
             to="majors"
             className={location.pathname.includes("majors") ? "active" : ""}
           >
@@ -100,20 +94,7 @@ const UniversityDetails = () => {
           >
             Location
           </Link>
-          <Link
-            to="diversity"
-            className={location.pathname.includes("diversity") ? "active" : ""}
-          >
-            Diversity
-          </Link>
-          <Link
-            to="reviews"
-            className={location.pathname.includes("reviews") ? "active" : ""}
-          >
-            Reviews
-          </Link>
         </nav>
-
         <div className="main-content">
           <Outlet context={university} />
         </div>
