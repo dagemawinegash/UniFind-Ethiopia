@@ -10,7 +10,7 @@ const Hero = () => {
           Find the perfect university in Ethiopia to get started on your
           academic journey.
         </h4>
-        <UniversitySearch/>
+        <UniversitySearch />
       </div>
     </div>
   );

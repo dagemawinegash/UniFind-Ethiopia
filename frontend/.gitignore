@@ -1,6 +1,5 @@
 .env
 universities.js
-./src/assets
 # Logs
 logs
 *.log
