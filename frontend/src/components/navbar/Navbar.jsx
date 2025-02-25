@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/UniFind.png";
 import {
   Link as RouterLink,
   useLocation,
@@ -51,7 +51,22 @@ const Navbar = () => {
   return (
     <>
       <nav className={`navbar ${sticky ? "dark-nav" : ""}`}>
-        <img src={logo} alt="" className="logo" />
+        {location === "" ? (
+          <ScrollLink
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            <img src={logo} alt="" className="logo" />
+          </ScrollLink>
+        ) : (
+          <button className="other-pages-logo" onClick={() => goToPageAndScroll("home")}>
+            <img src={logo} alt="" className="logo" />
+          </button>
+        )}
+
         <ul>
           {location === "" ? (
             <>
@@ -76,14 +91,8 @@ const Navbar = () => {
                   Popular
                 </ScrollLink>
               </li>
-              <li className="home-page-list">News</li>
               <li className="home-page-list">
-                <ScrollLink
-                  to="city"
-                  smooth={true}
-                  offset={-90}
-                  duration={500}
-                >
+                <ScrollLink to="city" smooth={true} offset={-90} duration={500}>
                   City
                 </ScrollLink>
               </li>
@@ -100,9 +109,6 @@ const Navbar = () => {
                 <button onClick={() => goToPageAndScroll("popular")}>
                   Popular
                 </button>
-              </li>
-              <li className="other-page-list">
-                <button onClick={() => goToPageAndScroll("news")}>News</button>
               </li>
               <li className="other-page-list">
                 <button onClick={() => goToPageAndScroll("city")}>City</button>

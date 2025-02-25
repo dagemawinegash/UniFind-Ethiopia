@@ -46,3 +46,9 @@
   transition: 1s;
 }
 
+.other-pages-logo{
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}

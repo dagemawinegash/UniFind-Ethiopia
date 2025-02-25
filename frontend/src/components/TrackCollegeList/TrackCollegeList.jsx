@@ -20,7 +20,7 @@ const TrackCollegeList = () => {
       </p>
 
       <button className="btn">
-        <Link to='/lists'>Get Started</Link>
+        <Link to="/lists">Get Started</Link>
       </button>
     </div>
   );
