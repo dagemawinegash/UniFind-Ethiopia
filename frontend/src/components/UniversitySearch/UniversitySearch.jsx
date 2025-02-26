@@ -20,7 +20,6 @@ const UniversitySearch = () => {
       })
       .catch((err) => alert(err));
   };
-  console.log(universityData)
 
   const handleSearch = (e) => {
     const input = e.target.value;

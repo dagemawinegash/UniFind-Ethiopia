@@ -10,6 +10,8 @@ import {
 import { Link as ScrollLink } from "react-scroll";
 import { scroller } from "react-scroll";
 import { useSelector } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const path = useLocation().pathname;
@@ -101,7 +103,13 @@ const Navbar = () => {
                 </ScrollLink>
               </li>
               <li className="btn my-list-btn home-page-list">
-                <RouterLink to="/lists">My List {count}</RouterLink>
+                <RouterLink to="/lists" className="fav-link">
+                  My List
+                  <span className="fav-count">
+                    <FontAwesomeIcon icon={faHeart} className="heart-icon" />
+                    <span className="count">{count}</span>
+                  </span>
+                </RouterLink>
               </li>
             </>
           ) : (
@@ -118,7 +126,13 @@ const Navbar = () => {
                 <button onClick={() => goToPageAndScroll("city")}>City</button>
               </li>
               <li className="btn my-list-btn home-page-list">
-                <RouterLink to="/lists">My List {count}</RouterLink>
+                <RouterLink to="/lists" className="fav-link">
+                  My List
+                  <span className="fav-count">
+                    <FontAwesomeIcon icon={faHeart} className="heart-icon" />
+                    <span className="count">{count}</span>
+                  </span>
+                </RouterLink>
               </li>
             </>
           )}
