@@ -24,7 +24,7 @@
 }
 .navbar .home-page-list, .other-page-list{
   margin: 5px 20px;
-  font-size: 16px;
+  font-size: 17.5px;
 } 
 
 
@@ -38,7 +38,7 @@
   color: #FFFFFF;
   background-color: transparent;
   border: none;
-  font-size: 16px;
+  font-size: 17.5px;
   cursor: pointer;
 }
 
@@ -52,4 +52,31 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
+}
+
+.fav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.fav-count {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.heart-icon {
+  font-size: 25px;
+  color: #000F38;
+}
+
+.count {
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
 }
