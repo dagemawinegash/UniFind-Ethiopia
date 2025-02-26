@@ -3,7 +3,6 @@ import Navbar from "./components/navbar/Navbar";
 import UniversityDetails from "./components/UniversityDetails/UniversityDetails";
 import Overview from "./components/overview/Overview";
 import Home from "./components/Home/Home";
-import Admissions from "./components/admissions/Admissions";
 import Majors from "./components/Majors/Majors";
 import Location from "./components/location/Location";
 import { Navigate } from "react-router-dom";
@@ -21,7 +20,6 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <Navigate to="overview" replace /> },
           { path: "overview", element: <Overview /> },
-          { path: "admissions", element: <Admissions /> },
           { path: "majors", element: <Majors /> },
           { path: "location", element: <Location /> },
         ],
