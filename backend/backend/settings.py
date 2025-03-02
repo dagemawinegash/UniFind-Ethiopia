@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 from urllib.parse import urlparse
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -55,6 +58,8 @@ INSTALLED_APPS = [
     "api",
     "rest_framework",
     "corsheaders",
+    "cloudinary",
+    "cloudinary_storage",
 ]
 
 MIDDLEWARE = [
@@ -175,3 +180,11 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_CREDENTIALS = True
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": os.getenv("CLOUDINARY_CLOUD_NAME"),
+    "API_KEY": os.getenv("CLOUDINARY_API_KEY"),
+    "API_SECRET": os.getenv("CLOUDINARY_API_SECRET"),
+}
+
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"

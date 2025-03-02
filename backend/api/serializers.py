@@ -28,14 +28,6 @@ class CollegeSerializer(serializers.ModelSerializer):
 
 class UniversitySerializer(serializers.ModelSerializer):
     colleges = CollegeSerializer(many=True)
-    universityImage1 = serializers.ImageField(
-        max_length=None, use_url=True, required=False
-    )
-    universityImage2 = serializers.ImageField(
-        max_length=None, use_url=True, required=False
-    )
-    mapImage = serializers.ImageField(max_length=None, use_url=True, required=False)
-    cityImage = serializers.ImageField(max_length=None, use_url=True, required=False)
 
     class Meta:
         model = University
@@ -48,7 +40,6 @@ class UniversitySerializer(serializers.ModelSerializer):
             "location",
             "cityLocation",
             "mapLocation",
-            "mapImage",
             "locationDescription",
             "address",
             "establishedIn",
