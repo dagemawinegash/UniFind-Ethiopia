@@ -69,6 +69,7 @@ const UniversityDetails = () => {
           }
           alt={university.name}
         />
+        {console.log(university.universityImage1)}
         <div className="university-details-content">
           <h1>{university.name}</h1>
           <p className="location">

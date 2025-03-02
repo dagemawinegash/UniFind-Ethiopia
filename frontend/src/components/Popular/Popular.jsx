@@ -72,7 +72,7 @@ export default function Popular() {
                 alt={universityData[0].name}
               />
               <span className="popular-card-location">
-                {universityData[0].location}
+                {universityData[0].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
@@ -97,7 +97,7 @@ export default function Popular() {
                 alt={universityData[1].name}
               />
               <span className="popular-card-location">
-                {universityData[1].location}
+                {universityData[1].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
@@ -121,7 +121,7 @@ export default function Popular() {
                 alt={universityData[2].name}
               />
               <span className="popular-card-location">
-                {universityData[2].location}
+                {universityData[2].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
@@ -145,7 +145,7 @@ export default function Popular() {
                 alt={universityData[9].name}
               />
               <span className="popular-card-location">
-                {universityData[9].location}
+                {universityData[9].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
@@ -169,7 +169,7 @@ export default function Popular() {
                 alt={universityData[18].name}
               />
               <span className="popular-card-location">
-                {universityData[18].location}
+                {universityData[18].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
@@ -193,7 +193,7 @@ export default function Popular() {
                 alt={universityData[20].name}
               />
               <span className="popular-card-location">
-                {universityData[20].location}
+                {universityData[20].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
@@ -217,7 +217,7 @@ export default function Popular() {
                 alt={universityData[22].name}
               />
               <span className="popular-card-location">
-                {universityData[22].location}
+                {universityData[22].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
@@ -241,7 +241,7 @@ export default function Popular() {
                 alt={universityData[29].name}
               />
               <span className="popular-card-location">
-                {universityData[29].location}
+                {universityData[29].cityName}
               </span>
             </Link>
             <div className="popular-card-body">

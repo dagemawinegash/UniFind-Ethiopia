@@ -1,11 +1,12 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 
 class University(models.Model):
     name = models.CharField(max_length=200)
     nameAbbrivation = models.CharField(max_length=100)
-    universityImage1 = models.ImageField(upload_to="images/", blank=True, null=True)
-    universityImage2 = models.ImageField(upload_to="images/", blank=True, null=True)
+    universityImage1 = models.CharField(max_length=300, null=True, blank=True)
+    universityImage2 = models.CharField(max_length=300, null=True, blank=True)
     location = models.CharField(max_length=200)
     cityLocation = models.CharField(max_length=150)
     mapLocation = models.CharField(max_length=500)
@@ -16,7 +17,7 @@ class University(models.Model):
     type = models.CharField(max_length=50)
     duration = models.CharField(max_length=50)
     cityName = models.CharField(max_length=100, blank=True, null=True)
-    cityImage = models.ImageField(upload_to="images/", blank=True, null=True)
+    cityImage = models.CharField(max_length=300, null=True, blank=True)
     officialWebsite = models.URLField(max_length=200)
     websitePrefix = models.CharField(max_length=100)
     UGRADenrollmentNumber = models.CharField(max_length=100, blank=True, null=True)
