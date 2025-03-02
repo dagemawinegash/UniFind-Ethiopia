@@ -43,8 +43,8 @@ const List = () => {
       <img
         src={
           university.universityImage2
-            ? `http://127.0.0.1:8000${university.universityImage2}`
-            : `http://127.0.0.1:8000${university.universityImage1}`
+            ? university.universityImage2
+            : university.universityImage1
         }
         alt={university.name}
       />
