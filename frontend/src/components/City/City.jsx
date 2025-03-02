@@ -54,7 +54,7 @@ const City = () => {
           <SwiperSlide key={universityData[0].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={`http://127.0.0.1:8000${universityData[0].cityImage}`}
+                src={universityData[0].cityImage}
                 alt={universityData[0].name}
               />
               <h2 className="city-name">{universityData[0].cityName}</h2>
@@ -63,7 +63,7 @@ const City = () => {
           <SwiperSlide key={universityData[1].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={`http://127.0.0.1:8000${universityData[1].cityImage}`}
+                src={universityData[1].cityImage}
                 alt={universityData[1].name}
               />
               <h2 className="city-name">{universityData[1].cityName}</h2>
@@ -73,7 +73,7 @@ const City = () => {
           <SwiperSlide key={universityData[9].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={`http://127.0.0.1:8000${universityData[9].cityImage}`}
+                src={universityData[9].cityImage}
                 alt={universityData[9].name}
               />
               <h2 className="city-name">{universityData[9].cityName}</h2>
@@ -82,7 +82,7 @@ const City = () => {
           <SwiperSlide key={universityData[18].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={`http://127.0.0.1:8000${universityData[18].cityImage}`}
+                src={universityData[18].cityImage}
                 alt={universityData[18].name}
               />
               <h2 className="city-name">{universityData[18].cityName}</h2>
@@ -91,7 +91,7 @@ const City = () => {
           <SwiperSlide key={universityData[20].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={`http://127.0.0.1:8000${universityData[20].cityImage}`}
+                src={universityData[20].cityImage}
                 alt={universityData[20].name}
               />
               <h2 className="city-name">{universityData[20].cityName}</h2>
@@ -100,7 +100,7 @@ const City = () => {
           <SwiperSlide key={universityData[22].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={`http://127.0.0.1:8000${universityData[22].cityImage}`}
+                src={universityData[22].cityImage}
                 alt={universityData[22].name}
               />
               <h2 className="city-name">{universityData[22].cityName}</h2>
@@ -109,7 +109,7 @@ const City = () => {
           <SwiperSlide key={universityData[29].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={`http://127.0.0.1:8000${universityData[29].cityImage}`}
+                src={universityData[29].cityImage}
                 alt={universityData[29].name}
               />
               <h2 className="city-name">{universityData[29].cityName}</h2>

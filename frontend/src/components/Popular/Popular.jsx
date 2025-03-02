@@ -66,8 +66,8 @@ export default function Popular() {
               <img
                 src={
                   universityData[0].universityImage1
-                    ? `http://127.0.0.1:8000${universityData[0].universityImage1}`
-                    : `http://127.0.0.1:8000${universityData[0].universityImage2}`
+                    ? universityData[0].universityImage1
+                    : universityData[0].universityImage2
                 }
                 alt={universityData[0].name}
               />
@@ -91,8 +91,8 @@ export default function Popular() {
               <img
                 src={
                   universityData[1].universityImage1
-                    ? `http://127.0.0.1:8000${universityData[1].universityImage1}`
-                    : `http://127.0.0.1:8000${universityData[1].universityImage2}`
+                    ? universityData[1].universityImage1
+                    : universityData[1].universityImage2
                 }
                 alt={universityData[1].name}
               />
@@ -115,8 +115,8 @@ export default function Popular() {
               <img
                 src={
                   universityData[2].universityImage1
-                    ? `http://127.0.0.1:8000${universityData[2].universityImage1}`
-                    : `http://127.0.0.1:8000${universityData[2].universityImage2}`
+                    ? universityData[2].universityImage1
+                    : universityData[2].universityImage2
                 }
                 alt={universityData[2].name}
               />
@@ -139,8 +139,8 @@ export default function Popular() {
               <img
                 src={
                   universityData[9].universityImage1
-                    ? `http://127.0.0.1:8000${universityData[9].universityImage1}`
-                    : `http://127.0.0.1:8000${universityData[9].universityImage2}`
+                    ? universityData[9].universityImage1
+                    : universityData[9].universityImage2
                 }
                 alt={universityData[9].name}
               />
@@ -163,8 +163,8 @@ export default function Popular() {
               <img
                 src={
                   universityData[18].universityImage1
-                    ? `http://127.0.0.1:8000${universityData[18].universityImage1}`
-                    : `http://127.0.0.1:8000${universityData[18].universityImage2}`
+                    ? universityData[18].universityImage1
+                    : universityData[18].universityImage2
                 }
                 alt={universityData[18].name}
               />
@@ -187,8 +187,8 @@ export default function Popular() {
               <img
                 src={
                   universityData[20].universityImage1
-                    ? `http://127.0.0.1:8000${universityData[20].universityImage1}`
-                    : `http://127.0.0.1:8000${universityData[20].universityImage2}`
+                    ? universityData[20].universityImage1
+                    : universityData[20].universityImage2
                 }
                 alt={universityData[20].name}
               />
@@ -211,8 +211,8 @@ export default function Popular() {
               <img
                 src={
                   universityData[22].universityImage1
-                    ? `http://127.0.0.1:8000${universityData[22].universityImage1}`
-                    : `http://127.0.0.1:8000${universityData[22].universityImage2}`
+                    ? universityData[22].universityImage1
+                    : universityData[22].universityImage2
                 }
                 alt={universityData[22].name}
               />
@@ -235,8 +235,8 @@ export default function Popular() {
               <img
                 src={
                   universityData[29].universityImage1
-                    ? `http://127.0.0.1:8000${universityData[29].universityImage1}`
-                    : `http://127.0.0.1:8000${universityData[29].universityImage2}`
+                    ? universityData[29].universityImage1
+                    : universityData[29].universityImage2
                 }
                 alt={universityData[29].name}
               />
