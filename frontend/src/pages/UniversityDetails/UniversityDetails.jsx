@@ -1,6 +1,6 @@
 import { Outlet, Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./universityDetails.css";
+import "./UniversityDetails.css";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
