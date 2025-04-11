@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { remove } from "../../store/listSlice";
 import { FaLocationDot } from "react-icons/fa6";
-import "./list.css";
+import "./List.css";
 import { FaHeartBroken } from "react-icons/fa";
 import emptyList from "../../assets/empty-list.jpg";
 import { Link } from "react-router-dom";
