@@ -1,12 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import UniversityDetails from "./components/UniversityDetails/UniversityDetails";
+import UniversityDetails from "./pages/UniversityDetails/UniversityDetails";
 import Overview from "./components/overview/Overview";
-import Home from "./components/Home/Home";
+import Home from "./pages/Home/Home";
 import Majors from "./components/Majors/Majors";
 import Location from "./components/location/Location";
 import { Navigate } from "react-router-dom";
-import List from "./components/List/List";
+import List from "./pages/List/List";
 
 const router = createBrowserRouter([
   {
