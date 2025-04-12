@@ -23,12 +23,16 @@ const City = () => {
       .catch((err) => alert(err));
   };
 
-  const popular_city_ids = [1, 2, 10, 19, 21, 23, 30];
-  const popular_cities = universityData.filter((university) =>
-    popular_city_ids.includes(university.id)
-  );
+  var popular_cities = [];
 
-  // console.log(popular_cities);
+  if (universityData.length > 0) {
+    const popular_city_ids = [1, 2, 10, 19, 21, 23, 30];
+    popular_cities = universityData.filter((university) =>
+      popular_city_ids.includes(university.id)
+    );
+  }
+
+  console.log(popular_cities);
   return (
     <div name="city">
       <div className="cities-title">
