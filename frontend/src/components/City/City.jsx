@@ -22,6 +22,13 @@ const City = () => {
       })
       .catch((err) => alert(err));
   };
+
+  const popular_city_ids = [1, 2, 10, 19, 21, 23, 30];
+  const popular_cities = universityData.filter((university) =>
+    popular_city_ids.includes(university.id)
+  );
+
+  // console.log(popular_cities);
   return (
     <div name="city">
       <div className="cities-title">
@@ -51,68 +58,73 @@ const City = () => {
             },
           }}
         >
-          <SwiperSlide key={universityData[0].id} className="city-card">
+          <SwiperSlide key={popular_cities[0].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={universityData[0].cityImage}
-                alt={universityData[0].name}
+                src={popular_cities[0].cityImage}
+                alt={popular_cities[0].name}
               />
-              <h2 className="city-name">{universityData[0].cityName}</h2>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide key={universityData[1].id} className="city-card">
-            <div className="city-card-image">
-              <img
-                src={universityData[1].cityImage}
-                alt={universityData[1].name}
-              />
-              <h2 className="city-name">{universityData[1].cityName}</h2>
+              <h2 className="city-name">{popular_cities[0].cityName}</h2>
             </div>
           </SwiperSlide>
 
-          <SwiperSlide key={universityData[9].id} className="city-card">
+          <SwiperSlide key={popular_cities[1].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={universityData[9].cityImage}
-                alt={universityData[9].name}
+                src={popular_cities[1].cityImage}
+                alt={popular_cities[1].name}
               />
-              <h2 className="city-name">{universityData[9].cityName}</h2>
+              <h2 className="city-name">{popular_cities[1].cityName}</h2>
             </div>
           </SwiperSlide>
-          <SwiperSlide key={universityData[18].id} className="city-card">
+
+          <SwiperSlide key={popular_cities[2].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={universityData[18].cityImage}
-                alt={universityData[18].name}
+                src={popular_cities[2].cityImage}
+                alt={popular_cities[2].name}
               />
-              <h2 className="city-name">{universityData[18].cityName}</h2>
+              <h2 className="city-name">{popular_cities[2].cityName}</h2>
             </div>
           </SwiperSlide>
-          <SwiperSlide key={universityData[20].id} className="city-card">
+
+          <SwiperSlide key={popular_cities[3].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={universityData[20].cityImage}
-                alt={universityData[20].name}
+                src={popular_cities[3].cityImage}
+                alt={popular_cities[3].name}
               />
-              <h2 className="city-name">{universityData[20].cityName}</h2>
+              <h2 className="city-name">{popular_cities[3].cityName}</h2>
             </div>
           </SwiperSlide>
-          <SwiperSlide key={universityData[22].id} className="city-card">
+
+          <SwiperSlide key={popular_cities[4].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={universityData[22].cityImage}
-                alt={universityData[22].name}
+                src={popular_cities[4].cityImage}
+                alt={popular_cities[4].name}
               />
-              <h2 className="city-name">{universityData[22].cityName}</h2>
+              <h2 className="city-name">{popular_cities[4].cityName}</h2>
             </div>
           </SwiperSlide>
-          <SwiperSlide key={universityData[29].id} className="city-card">
+
+          <SwiperSlide key={popular_cities[5].id} className="city-card">
             <div className="city-card-image">
               <img
-                src={universityData[29].cityImage}
-                alt={universityData[29].name}
+                src={popular_cities[5].cityImage}
+                alt={popular_cities[5].name}
               />
-              <h2 className="city-name">{universityData[29].cityName}</h2>
+              <h2 className="city-name">{popular_cities[5].cityName}</h2>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide key={popular_cities[6].id} className="city-card">
+            <div className="city-card-image">
+              <img
+                src={popular_cities[6].cityImage}
+                alt={popular_cities[6].name}
+              />
+              <h2 className="city-name">{popular_cities[6].cityName}</h2>
             </div>
           </SwiperSlide>
         </Swiper>
