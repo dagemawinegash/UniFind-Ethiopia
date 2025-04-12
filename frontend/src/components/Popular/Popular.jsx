@@ -23,6 +23,7 @@ export default function Popular() {
       })
       .catch((err) => alert(err));
   };
+  console.log(universityData)
 
   return (
     <div name="popular">
