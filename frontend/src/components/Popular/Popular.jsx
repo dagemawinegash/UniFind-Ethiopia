@@ -23,7 +23,13 @@ export default function Popular() {
       })
       .catch((err) => alert(err));
   };
-  console.log(universityData)
+  console.log(universityData);
+
+  const popular_university_ids = [1, 2, 3, 10, 19, 21, 23, 30];
+  const popular_universities = universityData.filter((university) =>
+    popular_university_ids.includes(university.id)
+  );
+  // console.log(popular_universities);
 
   return (
     <div name="popular">
@@ -59,196 +65,234 @@ export default function Popular() {
             },
           }}
         >
-          <SwiperSlide key={universityData[0].id} className="popular-card">
+          <SwiperSlide
+            key={popular_universities[0].id}
+            className="popular-card"
+          >
             <Link
-              to={`/university/${universityData[0].id}`}
+              to={`/university/${popular_universities[0].id}`}
               className="popular-card-image"
             >
               <img
                 src={
-                  universityData[0].universityImage1
-                    ? universityData[0].universityImage1
-                    : universityData[0].universityImage2
+                  popular_universities[0].universityImage1
+                    ? popular_universities[0].universityImage1
+                    : popular_universities[0].universityImage2
                 }
-                alt={universityData[0].name}
+                alt={popular_universities[0].name}
               />
               <span className="popular-card-location">
-                {universityData[0].cityName}
+                {popular_universities[0].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
-              <h3>{universityData[0].name}</h3>
+              <h3>{popular_universities[0].name}</h3>
               <p>
-                {universityData[0].type} {universityData[0].duration}
+                {popular_universities[0].type}{" "}
+                {popular_universities[0].duration}
               </p>
             </div>
           </SwiperSlide>
 
-          <SwiperSlide key={universityData[1].id} className="popular-card">
+          <SwiperSlide
+            key={popular_universities[1].id}
+            className="popular-card"
+          >
             <Link
-              to={`/university/${universityData[1].id}`}
+              to={`/university/${popular_universities[1].id}`}
               className="popular-card-image"
             >
               <img
                 src={
-                  universityData[1].universityImage1
-                    ? universityData[1].universityImage1
-                    : universityData[1].universityImage2
+                  popular_universities[1].universityImage1
+                    ? popular_universities[1].universityImage1
+                    : popular_universities[1].universityImage2
                 }
-                alt={universityData[1].name}
+                alt={popular_universities[1].name}
               />
               <span className="popular-card-location">
-                {universityData[1].cityName}
+                {popular_universities[1].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
-              <h3>{universityData[1].name}</h3>
+              <h3>{popular_universities[1].name}</h3>
               <p>
-                {universityData[1].type} {universityData[1].duration}
+                {popular_universities[1].type}{" "}
+                {popular_universities[1].duration}
               </p>
             </div>
           </SwiperSlide>
-          <SwiperSlide key={universityData[2].id} className="popular-card">
+
+          <SwiperSlide
+            key={popular_universities[2].id}
+            className="popular-card"
+          >
             <Link
-              to={`/university/${universityData[2].id}`}
+              to={`/university/${popular_universities[2].id}`}
               className="popular-card-image"
             >
               <img
                 src={
-                  universityData[2].universityImage1
-                    ? universityData[2].universityImage1
-                    : universityData[2].universityImage2
+                  popular_universities[2].universityImage1
+                    ? popular_universities[2].universityImage1
+                    : popular_universities[2].universityImage2
                 }
-                alt={universityData[2].name}
+                alt={popular_universities[2].name}
               />
               <span className="popular-card-location">
-                {universityData[2].cityName}
+                {popular_universities[2].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
-              <h3>{universityData[2].name}</h3>
+              <h3>{popular_universities[2].name}</h3>
               <p>
-                {universityData[2].type} {universityData[2].duration}
+                {popular_universities[2].type}{" "}
+                {popular_universities[2].duration}
               </p>
             </div>
           </SwiperSlide>
-          <SwiperSlide key={universityData[9].id} className="popular-card">
+
+          <SwiperSlide
+            key={popular_universities[3].id}
+            className="popular-card"
+          >
             <Link
-              to={`/university/${universityData[9].id}`}
+              to={`/university/${popular_universities[3].id}`}
               className="popular-card-image"
             >
               <img
                 src={
-                  universityData[9].universityImage1
-                    ? universityData[9].universityImage1
-                    : universityData[9].universityImage2
+                  popular_universities[3].universityImage1
+                    ? popular_universities[3].universityImage1
+                    : popular_universities[3].universityImage2
                 }
-                alt={universityData[9].name}
+                alt={popular_universities[3].name}
               />
               <span className="popular-card-location">
-                {universityData[9].cityName}
+                {popular_universities[3].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
-              <h3>{universityData[9].name}</h3>
+              <h3>{popular_universities[3].name}</h3>
               <p>
-                {universityData[9].type} {universityData[9].duration}
+                {popular_universities[3].type}{" "}
+                {popular_universities[3].duration}
               </p>
             </div>
           </SwiperSlide>
-          <SwiperSlide key={universityData[18].id} className="popular-card">
+
+          <SwiperSlide
+            key={popular_universities[4].id}
+            className="popular-card"
+          >
             <Link
-              to={`/university/${universityData[18].id}`}
+              to={`/university/${popular_universities[4].id}`}
               className="popular-card-image"
             >
               <img
                 src={
-                  universityData[18].universityImage1
-                    ? universityData[18].universityImage1
-                    : universityData[18].universityImage2
+                  popular_universities[4].universityImage1
+                    ? popular_universities[4].universityImage1
+                    : popular_universities[4].universityImage2
                 }
-                alt={universityData[18].name}
+                alt={popular_universities[4].name}
               />
               <span className="popular-card-location">
-                {universityData[18].cityName}
+                {popular_universities[4].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
-              <h3>{universityData[18].name}</h3>
+              <h3>{popular_universities[4].name}</h3>
               <p>
-                {universityData[18].type} {universityData[18].duration}
+                {popular_universities[4].type}{" "}
+                {popular_universities[4].duration}
               </p>
             </div>
           </SwiperSlide>
-          <SwiperSlide key={universityData[20].id} className="popular-card">
+
+          <SwiperSlide
+            key={popular_universities[5].id}
+            className="popular-card"
+          >
             <Link
-              to={`/university/${universityData[20].id}`}
+              to={`/university/${popular_universities[5].id}`}
               className="popular-card-image"
             >
               <img
                 src={
-                  universityData[20].universityImage1
-                    ? universityData[20].universityImage1
-                    : universityData[20].universityImage2
+                  popular_universities[5].universityImage1
+                    ? popular_universities[5].universityImage1
+                    : popular_universities[5].universityImage2
                 }
-                alt={universityData[20].name}
+                alt={popular_universities[5].name}
               />
               <span className="popular-card-location">
-                {universityData[20].cityName}
+                {popular_universities[5].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
-              <h3>{universityData[20].name}</h3>
+              <h3>{popular_universities[5].name}</h3>
               <p>
-                {universityData[20].type} {universityData[20].duration}
+                {popular_universities[5].type}{" "}
+                {popular_universities[5].duration}
               </p>
             </div>
           </SwiperSlide>
-          <SwiperSlide key={universityData[22].id} className="popular-card">
+
+          <SwiperSlide
+            key={popular_universities[6].id}
+            className="popular-card"
+          >
             <Link
-              to={`/university/${universityData[22].id}`}
+              to={`/university/${popular_universities[6].id}`}
               className="popular-card-image"
             >
               <img
                 src={
-                  universityData[22].universityImage1
-                    ? universityData[22].universityImage1
-                    : universityData[22].universityImage2
+                  popular_universities[6].universityImage1
+                    ? popular_universities[6].universityImage1
+                    : popular_universities[6].universityImage2
                 }
-                alt={universityData[22].name}
+                alt={popular_universities[6].name}
               />
               <span className="popular-card-location">
-                {universityData[22].cityName}
+                {popular_universities[6].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
-              <h3>{universityData[22].name}</h3>
+              <h3>{popular_universities[6].name}</h3>
               <p>
-                {universityData[22].type} {universityData[22].duration}
+                {popular_universities[6].type}{" "}
+                {popular_universities[6].duration}
               </p>
             </div>
           </SwiperSlide>
-          <SwiperSlide key={universityData[29].id} className="popular-card">
+
+          <SwiperSlide
+            key={popular_universities[7].id}
+            className="popular-card"
+          >
             <Link
-              to={`/university/${universityData[29].id}`}
+              to={`/university/${popular_universities[7].id}`}
               className="popular-card-image"
             >
               <img
                 src={
-                  universityData[29].universityImage1
-                    ? universityData[29].universityImage1
-                    : universityData[29].universityImage2
+                  popular_universities[7].universityImage1
+                    ? popular_universities[7].universityImage1
+                    : popular_universities[7].universityImage2
                 }
-                alt={universityData[29].name}
+                alt={popular_universities[7].name}
               />
               <span className="popular-card-location">
-                {universityData[29].cityName}
+                {popular_universities[7].cityName}
               </span>
             </Link>
             <div className="popular-card-body">
-              <h3>{universityData[29].name}</h3>
+              <h3>{popular_universities[7].name}</h3>
               <p>
-                {universityData[29].type} {universityData[29].duration}
+                {popular_universities[7].type}{" "}
+                {popular_universities[7].duration}
               </p>
             </div>
           </SwiperSlide>
