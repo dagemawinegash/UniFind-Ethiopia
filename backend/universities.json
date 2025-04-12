@@ -3132,7 +3132,7 @@
   {
     "id": 26,
     "name": "Jinka University",
-    "nameAbbreviation": "JKU",
+    "nameAbbrivation": "JKU",
     "universityImage1": "https://res.cloudinary.com/ds8tpcsdc/image/upload/v1740645277/vymgmt6jpgn2sf7hdorb.jpg",
     "location": "Jinka",
     "cityLocation": "https://maps.app.goo.gl/SRv1CukVMrt1DarBA",
@@ -3214,7 +3214,7 @@
   {
     "id": 27,
     "name": "Kebri Dehar University",
-    "nameAbbreviation": "KDU",
+    "nameAbbrivation": "KDU",
     "universityImage1": "https://res.cloudinary.com/ds8tpcsdc/image/upload/v1740645278/avdqhybgxpjonfxhxpoe.jpg",
     "location": "Kebri Dehar",
     "cityLocation": "https://maps.app.goo.gl/mRW4u2QZWUKh1Hc4A",
@@ -3310,7 +3310,7 @@
   {
     "id": 28,
     "name": "Kotebe University of Education",
-    "nameAbbreviation": "KUE",
+    "nameAbbrivation": "KUE",
     "universityImage1": "https://res.cloudinary.com/ds8tpcsdc/image/upload/v1740645279/dlfahyho9fgnjzpeg0zn.jpg",
     "location": "Addis Ababa",
     "cityLocation": "https://maps.app.goo.gl/LPAWqixsqhFgmZfL7",
@@ -3382,7 +3382,7 @@
   {
     "id": 29,
     "name": "Madda Walabu University",
-    "nameAbbreviation": "MWU",
+    "nameAbbrivation": "MWU",
     "universityImage1": "https://res.cloudinary.com/ds8tpcsdc/image/upload/v1740645279/v267w9bxmv38qjegqcn5.jpg",
     "location": "Robe, Bale Zone",
     "cityLocation": "https://maps.app.goo.gl/Dqx3TwQfGJoxbRcZA",
