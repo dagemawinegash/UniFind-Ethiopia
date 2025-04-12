@@ -10,12 +10,12 @@ const Overview = () => {
         <div>
           <div className="overview-section-details">
             <strong>
-              {university.UGRADenrollmentNumber != undefined
+              {university.UGRADenrollmentNumber
                 ? "UGrad.Enrollment"
                 : "Enrollment"}
             </strong>
             <p>
-              {university.UGRADenrollmentNumber != undefined
+              {university.UGRADenrollmentNumber
                 ? university.UGRADenrollmentNumber
                 : university.generalEnrollmentNumber}
             </p>
