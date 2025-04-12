@@ -25,11 +25,16 @@ export default function Popular() {
   };
   console.log(universityData);
 
-  const popular_university_ids = [1, 2, 3, 10, 19, 21, 23, 30];
-  const popular_universities = universityData.filter((university) =>
-    popular_university_ids.includes(university.id)
-  );
-  // console.log(popular_universities);
+  var popular_universities = [];
+
+  if (universityData.length > 0) {
+    const popular_university_ids = [1, 2, 3, 10, 19, 21, 23, 30];
+    popular_universities = universityData.filter((university) =>
+      popular_university_ids.includes(university.id)
+    );
+  }
+
+  console.log(popular_universities);
 
   return (
     <div name="popular">
