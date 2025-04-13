@@ -32,7 +32,7 @@ const City = () => {
     );
   }
 
-  console.log(popular_cities);
+  // console.log(popular_cities);
   return (
     <div name="city">
       <div className="cities-title">
