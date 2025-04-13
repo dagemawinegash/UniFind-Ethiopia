@@ -23,7 +23,7 @@ export default function Popular() {
       })
       .catch((err) => alert(err));
   };
-  console.log(universityData);
+  // console.log(universityData);
 
   var popular_universities = [];
 
@@ -34,7 +34,7 @@ export default function Popular() {
     );
   }
 
-  console.log(popular_universities);
+  // console.log(popular_universities);
 
   return (
     <div name="popular">
