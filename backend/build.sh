@@ -4,7 +4,7 @@ pip install -r requirements.txt
 
 python manage.py collectstatic --no-input
 
-python populate_neon.py
+# python populate_neon.py
 
 python manage.py migrate
 
