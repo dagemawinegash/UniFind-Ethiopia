@@ -3,7 +3,7 @@ import json
 import django
 from django.db import transaction
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "api.deployment_settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.deployment_settings")
 django.setup()
 
 from api.models import University, College, Major
