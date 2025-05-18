@@ -103,3 +103,18 @@ class UniversityAPITest(TestCase):
             self.list_url, data=self.valid_payload, format="json"
         )
         self.assertEqual(response.status_code, 403)
+
+    def test_get_detail_with_auth(self):
+        self.authenticate()
+        response = self.client.get(self.detail_url(self.uni.pk))
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["name"], self.uni.name)
+
+    def test_get_detail_not_found(self):
+        self.authenticate()
+        response = self.client.get(self.detail_url(100))
+        self.assertEqual(response.status_code, 404)
+
+    def test_get_detail_without_auth(self):
+        response = self.client.get(self.detail_url(self.uni.pk))
+        self.assertEqual(response.status_code, 403)
