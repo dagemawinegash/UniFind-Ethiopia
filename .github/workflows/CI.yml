@@ -42,3 +42,11 @@ jobs:
         run: |
           echo DATABASE_URL="postgres://postgres:postgres@localhost:5432/testdb" >> $GITHUB_ENV
           echo SECRET_KEY_PASSWORD="${{ secrets.SECRET_KEY_PASSWORD }}" >> $GITHUB_ENV
+
+      - name: Apply migrations
+        working-directory: backend
+        run: python manage.py migrate --no-input
+
+      - name: Run tests
+        working-directory: backend
+        run: python manage.py test api.tests
