@@ -19,3 +19,6 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Run build.sh
+        working-directory: backend
+        run: bash build.sh
