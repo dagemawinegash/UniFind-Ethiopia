@@ -50,3 +50,6 @@ jobs:
       - name: Run tests
         working-directory: backend
         run: python manage.py test api
+
+      - name: Lint with flake8
+        run: flake8 .
