@@ -1,4 +1,4 @@
-from django.test import TestCase # for isolated test DB 
+from django.test import TestCase  # for isolated test DB
 from api.models import University, College
 
 

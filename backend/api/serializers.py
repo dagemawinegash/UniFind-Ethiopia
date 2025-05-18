@@ -17,7 +17,6 @@ class CollegeSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         majors_data = validated_data.pop("majors", [])
-
         college = College.objects.create(**validated_data)
 
         for major_data in majors_data:
@@ -64,7 +63,6 @@ class UniversitySerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         colleges_data = validated_data.pop("colleges", [])
-
         university = University.objects.create(**validated_data)
 
         for college_data in colleges_data:

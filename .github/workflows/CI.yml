@@ -51,8 +51,8 @@ jobs:
         working-directory: backend
         run: python manage.py test api
 
-      - name: Install flake8
-        run: pip install flake8
+      - name: Install pylint
+        run: pip install pylint
 
-      - name: Lint with flake8
-        run: flake8 backend
+      - name: Lint with pylint
+        run: pylint backend
