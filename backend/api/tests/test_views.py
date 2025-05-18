@@ -81,3 +81,25 @@ class UniversityAPITest(TestCase):
         response = self.client.get(self.list_url)
         self.assertEqual(response.status_code, 403)
 
+    def test_post_with_auth_and_valid_data(self):
+        self.authenticate()
+        response = self.client.post(
+            self.list_url, data=self.valid_payload, format="json"
+        )
+        self.assertEqual(response.status_code, 201)
+        self.assertEqual(University.objects.count(), 2)
+        self.assertEqual(response.data["name"], self.valid_payload["name"])
+
+    def test_post_with_auth_and_invalid_data(self):
+        self.authenticate()
+        invalid_payload = self.valid_payload.copy()
+        invalid_payload.pop("name")  # remove required field
+        response = self.client.post(self.list_url, data=invalid_payload, format="json")
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("name", response.data)
+
+    def test_post_without_auth(self):
+        response = self.client.post(
+            self.list_url, data=self.valid_payload, format="json"
+        )
+        self.assertEqual(response.status_code, 403)
