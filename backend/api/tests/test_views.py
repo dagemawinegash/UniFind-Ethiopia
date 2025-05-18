@@ -94,7 +94,11 @@ class UniversityAPITest(TestCase):
         self.authenticate()
         invalid_payload = self.valid_payload.copy()
         invalid_payload.pop("name")  # remove required field
-        response = self.client.post(self.list_url, data=invalid_payload, format="json")
+        response = self.client.post(
+            self.list_url,
+            data=invalid_payload,
+            format="json"
+        )
         self.assertEqual(response.status_code, 400)
         self.assertIn("name", response.data)
 

@@ -32,6 +32,9 @@ class UniversityModelTest(TestCase):
         self.assertEqual(str(self.uni), "Test Uni")
 
     def test_college_relationship(self):
-        college = College.objects.create(university=self.uni, name="College of Testing")
+        college = College.objects.create(
+            university=self.uni,
+            name="College of Testing"
+        )
         # accessing reverse relationship
         self.assertIn(college, self.uni.colleges.all())

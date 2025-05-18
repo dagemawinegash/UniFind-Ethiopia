@@ -19,8 +19,12 @@ class University(models.Model):
     cityImage = models.CharField(max_length=300, null=True, blank=True)
     officialWebsite = models.URLField(max_length=200)
     websitePrefix = models.CharField(max_length=100)
-    UGRADenrollmentNumber = models.CharField(max_length=100, blank=True, null=True)
-    generalEnrollmentNumber = models.CharField(max_length=100, blank=True, null=True)
+    UGRADenrollmentNumber = models.CharField(
+        max_length=100, blank=True, null=True
+    )
+    generalEnrollmentNumber = models.CharField(
+        max_length=100, blank=True, null=True
+    )
     size = models.CharField(max_length=100)
     status = models.CharField(max_length=100)
     onCampusHousing = models.CharField(max_length=50)
@@ -35,7 +39,9 @@ class University(models.Model):
 
 class College(models.Model):
     university = models.ForeignKey(
-        University, related_name="colleges", on_delete=models.CASCADE
+        University,
+        related_name="colleges",
+        on_delete=models.CASCADE
     )
     name = models.CharField(max_length=200)
 
@@ -45,7 +51,9 @@ class College(models.Model):
 
 class Major(models.Model):
     college = models.ForeignKey(
-        College, related_name="majors", on_delete=models.CASCADE
+        College,
+        related_name="majors",
+        on_delete=models.CASCADE
     )
     name = models.CharField(max_length=200)
     creditHours = models.CharField(max_length=50, blank=True, null=True)
