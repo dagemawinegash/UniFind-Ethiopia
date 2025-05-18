@@ -13,21 +13,37 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="university",
             name="cityImage",
-            field=models.ImageField(blank=True, null=True, upload_to="images/"),
+            field=models.ImageField(
+                blank=True,
+                null=True,
+                upload_to="images/"
+            ),
         ),
         migrations.AlterField(
             model_name="university",
             name="mapImage",
-            field=models.ImageField(blank=True, null=True, upload_to="images/"),
+            field=models.ImageField(
+                blank=True,
+                null=True,
+                upload_to="images/"
+            ),
         ),
         migrations.AlterField(
             model_name="university",
             name="universityImage1",
-            field=models.ImageField(blank=True, null=True, upload_to="images/"),
+            field=models.ImageField(
+                blank=True,
+                null=True,
+                upload_to="images/"
+            ),
         ),
         migrations.AlterField(
             model_name="university",
             name="universityImage2",
-            field=models.ImageField(blank=True, null=True, upload_to="images/"),
+            field=models.ImageField(
+                blank=True,
+                null=True,
+                upload_to="images/"
+            ),
         ),
     ]

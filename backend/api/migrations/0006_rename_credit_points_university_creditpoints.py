@@ -6,7 +6,11 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("api", "0005_alter_university_cityimage_alter_university_mapimage_and_more"),
+        (
+            "api",
+            "0005_alter_university_cityimage_"
+            "alter_university_mapimage_and_more",
+        ),
     ]
 
     operations = [
