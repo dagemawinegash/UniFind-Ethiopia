@@ -11,7 +11,4 @@ class DatabaseConnectionTest(TestCase):
             db_conn.cursor()
         except OperationalError:
             self.fail("Database connection failed")
-    def test_database_type(self):
-      db_engine = settings.DATABASES['default']['ENGINE']
-      print(f"Database engine in use: {db_engine}")
 
