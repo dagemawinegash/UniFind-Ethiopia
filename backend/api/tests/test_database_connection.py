@@ -1,7 +1,6 @@
 from django.db import connections
 from django.db.utils import OperationalError
 from django.test import TestCase
-from django.conf import settings
 
 
 class DatabaseConnectionTest(TestCase):
