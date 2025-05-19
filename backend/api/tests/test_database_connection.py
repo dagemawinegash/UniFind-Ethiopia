@@ -10,4 +10,3 @@ class DatabaseConnectionTest(TestCase):
             db_conn.cursor()
         except OperationalError:
             self.fail("Database connection failed")
-
