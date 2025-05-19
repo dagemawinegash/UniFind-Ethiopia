@@ -38,11 +38,6 @@ jobs:
         working-directory: backend
         run: bash build.sh
 
-      - name: Export env vars
-        run: |
-          echo DATABASE_URL="postgres://postgres:postgres@localhost:5432/testdb" >> $GITHUB_ENV
-          echo SECRET_KEY_PASSWORD="${{ secrets.SECRET_KEY_PASSWORD }}" >> $GITHUB_ENV
-
       - name: Run tests
         working-directory: backend
         run: python manage.py test api
