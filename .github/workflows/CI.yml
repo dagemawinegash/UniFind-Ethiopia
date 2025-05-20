@@ -9,10 +9,28 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: testdb
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U postgres"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
     
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+
+      - name: Set production settings
+        run: echo "DJANGO_SETTINGS_MODULE=backend.deployment_settings" >> $GITHUB_ENV
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -22,6 +40,9 @@ jobs:
       - name: Run build.sh
         working-directory: backend
         run: bash build.sh
+
+      - name: Export database URL
+        run: echo DATABASE_URL="postgres://postgres:postgres@localhost:5432/testdb" >> $GITHUB_ENV
 
       - name: Run tests
         working-directory: backend
