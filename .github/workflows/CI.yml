@@ -30,12 +30,6 @@ jobs:
 
       - name: Export database URL
         run: echo DATABASE_URL="postgres://postgres:postgres@localhost:5432/testdb" >> $GITHUB_ENV
-      
-      - name: Export Render hostname for CSRF/ALLOWED_HOSTS
-        run: echo RENDER_EXTERNAL_HOSTNAME="localhost" >> $GITHUB_ENV
-      
-      - name: Export SECRET_KEY for
-        run: echo SECRET_KEY="testsecret" >> $GITHUB_ENV
 
       - name: Set production settings
         run: echo "DJANGO_SETTINGS_MODULE=backend.deployment_settings" >> $GITHUB_ENV

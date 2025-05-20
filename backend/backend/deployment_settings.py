@@ -2,13 +2,16 @@ import os
 import dj_database_url
 from .settings import *  # noqa: F403,F401
 
-ALLOWED_HOSTS = [os.environ.get("RENDER_EXTERNAL_HOSTNAME")]
-CSRF_TRUSTED_ORIGINS = [
-    "https://" + os.environ.get("RENDER_EXTERNAL_HOSTNAME")
-]
-DEBUG = False
-SECRET_KEY = os.environ.get("SECRET_KEY")
+RENDER_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME", "")
 
+ALLOWED_HOSTS = [RENDER_HOSTNAME] if RENDER_HOSTNAME else []
+
+CSRF_TRUSTED_ORIGINS = (
+    [f"https://{RENDER_HOSTNAME}"] if RENDER_HOSTNAME else []
+)
+
+DEBUG = False
+SECRET_KEY = os.environ.get("SECRET_KEY", "testsecret")
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
