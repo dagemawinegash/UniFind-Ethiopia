@@ -32,6 +32,9 @@ jobs:
       - name: Set production settings
         run: echo "DJANGO_SETTINGS_MODULE=backend.deployment_settings" >> $GITHUB_ENV
 
+      - name: Export Render hostname for CSRF/ALLOWED_HOSTS
+        run: echo RENDER_EXTERNAL_HOSTNAME="localhost" >> $GITHUB_ENV
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
