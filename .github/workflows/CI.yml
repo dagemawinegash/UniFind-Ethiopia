@@ -28,12 +28,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Export database URL
+        run: echo DATABASE_URL="postgres://postgres:postgres@localhost:5432/testdb" >> $GITHUB_ENV
+      
+      - name: Export Render hostname for CSRF/ALLOWED_HOSTS
+        run: echo RENDER_EXTERNAL_HOSTNAME="localhost" >> $GITHUB_ENV
 
       - name: Set production settings
         run: echo "DJANGO_SETTINGS_MODULE=backend.deployment_settings" >> $GITHUB_ENV
-
-      - name: Export Render hostname for CSRF/ALLOWED_HOSTS
-        run: echo RENDER_EXTERNAL_HOSTNAME="localhost" >> $GITHUB_ENV
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -43,9 +45,6 @@ jobs:
       - name: Run build.sh
         working-directory: backend
         run: bash build.sh
-
-      - name: Export database URL
-        run: echo DATABASE_URL="postgres://postgres:postgres@localhost:5432/testdb" >> $GITHUB_ENV
 
       - name: Run tests
         working-directory: backend
