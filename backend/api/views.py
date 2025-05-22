@@ -32,4 +32,4 @@ class UniversityDetailView(APIView):
             return Response({"detail": "Not found"}, status=404)
 
         serializer = UniversitySerializer(university)
-        return Response(serializer.data)
+      return Response(serializer.data)
